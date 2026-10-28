@@ -1,0 +1,122 @@
+[
+  {
+    "source": "Business-Incorporation-Services.png",
+    "svg": "Business-Incorporation-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "layer_iou": {
+      "#202123": 0.980557,
+      "#C31E25": 0.968225
+    }
+  },
+  {
+    "source": "Event-Registration-Services.png",
+    "svg": "Event-Registration-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "layer_iou": {
+      "#202123": 0.981246,
+      "#C31E25": 0.960191
+    }
+  },
+  {
+    "source": "Internet-Marketing-Services.png",
+    "svg": "Internet-Marketing-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "layer_iou": {
+      "#202123": 0.961083,
+      "#C31E25": 0.975198
+    }
+  },
+  {
+    "source": "Internet-Publishing-Services.png",
+    "svg": "Internet-Publishing-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "layer_iou": {
+      "#202123": 0.986315,
+      "#C31E25": 0.974601
+    }
+  },
+  {
+    "source": "Visual-Communication-Services.png",
+    "svg": "Visual-Communication-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "layer_iou": {
+      "#202123": 0.969427,
+      "#C31E25": 0.969172
+    }
+  },
+  {
+    "source": "800-Answering-Services.png",
+    "svg": "800-Answering-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "layer_iou": {
+      "#202123": 0.964053,
+      "#C31E25": 0.973369
+    }
+  },
+  {
+    "source": "Adaptable-Virtual-Receptionist-Services.png",
+    "svg": "Adaptable-Virtual-Receptionist-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "layer_iou": {
+      "#202123": 0.957727,
+      "#C31E25": 0.959161
+    }
+  },
+  {
+    "source": "After-hours-Call-Center-Services.png",
+    "svg": "After-hours-Call-Center-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "layer_iou": {
+      "#202123": 0.977794,
+      "#C31E25": 0.967512
+    }
+  },
+  {
+    "source": "AI-Monitoring-Support-Services.png",
+    "svg": "AI-Monitoring-Support-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "layer_iou": {
+      "#202123": 0.974219,
+      "#C31E25": 0.957945
+    }
+  },
+  {
+    "source": "Answering-Services.png",
+    "svg": "Answering-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "layer_iou": {
+      "#202123": 0.957763,
+      "#C31E25": 0.955929
+    }
+  }
+]

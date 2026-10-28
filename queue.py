@@ -1,5 +1,5 @@
 """Local, restartable icon queue. No network calls or API keys."""
-import argparse,csv,json,re,shutil,sqlite3,unicodedata,zipfile
+import argparse,csv,json,re,shutil,sqlite3,tempfile,unicodedata,zipfile
 from pathlib import Path
 from collections import Counter
 ROOT=Path(__file__).resolve().parent
@@ -54,25 +54,46 @@ def packet(batch):
  for r in rows:
   if r['status']=='complete' or r['attempts']>=3:continue
   prompt=STYLE.format(title=r['title']);pf=d/f"{r['id']:04d}.txt";pf.write_text(prompt,encoding='utf-8')
-  jobs.append(dict(id=r['id'],title=r['title'],prompt_file=str(pf),output=str(ROOT/'output'/f'batch-{batch:03d}'/r['filename'])))
+  output=ROOT/'output'/f'batch-{batch:03d}'/r['filename']
+  jobs.append(dict(id=r['id'],title=r['title'],prompt_file=str(pf),output=str(output),svg_output=str(output.with_suffix('.svg'))))
  return jobs
 def accept(id,source):
  c=db();r=c.execute('SELECT * FROM icons WHERE id=?',(id,)).fetchone()
  if not r:raise ValueError('Unknown icon ID')
  if r['status']=='complete':return
  validate(source)
+ from vectorize import convert
  out=ROOT/'output'/f"batch-{r['batch']:03d}"/r['filename'];out.parent.mkdir(parents=True,exist_ok=True)
- if Path(source).resolve()!=out.resolve():shutil.copy2(source,out)
+ with tempfile.TemporaryDirectory(prefix='fws-accept-') as folder:
+  traced=Path(folder)/out.with_suffix('.svg').name
+  convert(source,traced)
+  if Path(source).resolve()!=out.resolve():shutil.copy2(source,out)
+  shutil.copy2(traced,out.with_suffix('.svg'))
  c.execute('UPDATE icons SET status="complete",error="" WHERE id=?',(id,));c.commit();c.close();export()
+def vectorize_batch(batch):
+ from vectorize import convert
+ rows=[r for r in export() if r['batch']==batch]
+ if not rows:raise ValueError('Unknown batch')
+ reports=[]
+ for r in rows:
+  if r['status']!='complete':continue
+  source=ROOT/'output'/f'batch-{batch:03d}'/r['filename'];validate(source)
+  reports.append(convert(source,source.with_suffix('.svg')))
+ report=ROOT/'work'/f'svg-validation-batch-{batch:03d}.json';report.parent.mkdir(exist_ok=True)
+ report.write_text(json.dumps(reports,indent=2)+'\n',encoding='utf-8')
+ print(report)
 def bundle(batch):
  from PIL import Image,ImageDraw
+ from vectorize import validate_svg
  rows=[r for r in export() if r['batch']==batch];dest=ROOT/'deliverables';dest.mkdir(exist_ok=True)
  if not rows or any(r['status']!='complete' for r in rows):raise ValueError('Batch incomplete; do not export partial ZIP')
  zp=dest/f'FWS-Icons-Batch-{batch:03d}.zip';tmp=zp.with_suffix('.tmp')
  sheet=Image.new('RGB',(1200,((len(rows)+4)//5)*290),'white');draw=ImageDraw.Draw(sheet)
  with zipfile.ZipFile(tmp,'w',zipfile.ZIP_DEFLATED) as z:
   for n,r in enumerate(rows):
-   p=ROOT/'output'/f'batch-{batch:03d}'/r['filename'];validate(p);z.write(p,p.name)
+   p=ROOT/'output'/f'batch-{batch:03d}'/r['filename'];validate(p)
+   svg=p.with_suffix('.svg');validate_svg(svg,p)
+   z.write(p,p.name);z.write(svg,svg.name)
    with Image.open(p) as im:
     im=im.convert('RGBA');im.thumbnail((210,210));x=n%5*240+(240-im.width)//2;y=n//5*290
     sheet.paste(im,(x,y),im)
@@ -84,7 +105,7 @@ def bundle(batch):
 def main():
  p=argparse.ArgumentParser();s=p.add_subparsers(dest='cmd',required=True)
  for name in ['init','status','next']:s.add_parser(name)
- for name in ['packet','bundle']:
+ for name in ['packet','bundle','vectorize']:
   q=s.add_parser(name);q.add_argument('batch',type=int)
  q=s.add_parser('accept');q.add_argument('id',type=int);q.add_argument('source',type=Path)
  q=s.add_parser('attempt');q.add_argument('id',type=int)
@@ -96,6 +117,7 @@ def main():
  elif a.cmd=='packet':print(json.dumps(packet(a.batch),indent=2))
  elif a.cmd=='accept':accept(a.id,a.source)
  elif a.cmd=='bundle':bundle(a.batch)
+ elif a.cmd=='vectorize':vectorize_batch(a.batch)
  elif a.cmd in ['attempt','fail']:
   c=db()
   if a.cmd=='attempt':
