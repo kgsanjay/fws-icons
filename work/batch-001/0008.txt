@@ -1,0 +1,6 @@
+Create exactly ONE premium corporate website service icon for: After-hours Call Center Services.
+Understand the service and choose one recognizable primary object with at most two minimal supporting elements. Distinct compact visual metaphor, professional enterprise aesthetic.
+Square canvas, centered icon occupying approximately 60–65%, generous equal margins. Clean flat 2D vector-style outlines, consistent medium-thin geometric strokes, rounded caps and joins. Mostly outline construction with tiny controlled fills only.
+Use ONLY charcoal #202123 for dominant structure and crimson #C31E25 for purposeful functional accents. BOTH colors must be visible.
+Genuine transparent alpha background, including enclosed negative spaces. No white fills, painted checkerboard, text, letters, numbers, logos, watermarks, gradients, shadows, textures, lighting, 3D, enclosing background cards or decoration. A single question mark may be used for FAQ subjects.
+Use highest available native resolution; do not upscale. Match reference.png when available for style only. Never render the filename or title as text. Output a separate PNG.
