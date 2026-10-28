@@ -7,3 +7,5 @@ If reference.png exists, inspect it and use as a style reference. Keep original 
 After each batch continue to the next if user requested all; do not request routine approval between batches. Stop for a real blocker, user pause, or exhausted generation attempts. Report failed IDs at the end. Never promise a single session will finish the entire list.
 
 Deliver both PNG and SVG for every icon. For older completed PNGs, run `python queue.py vectorize BATCH` without regenerating images or changing generation attempt counts. Bundling requires valid pairs. Inspect the SVG render as well as the original PNG; traces contain filled outlines, not semantic editable stroke centerlines.
+
+User-approved alpha cleanup: accept removes only pixels with alpha exactly 1/255, preserves every higher-opacity pixel and archives original PNGs by SHA-256 under work/originals/. All original validation still applies. Revalidate saved rejected images after cleanup without resetting generation attempts.

@@ -1,5 +1,5 @@
 """Local, restartable icon queue. No network calls or API keys."""
-import argparse,csv,json,re,shutil,sqlite3,tempfile,unicodedata,zipfile
+import argparse,csv,hashlib,json,re,shutil,sqlite3,tempfile,unicodedata,zipfile
 from pathlib import Path
 from collections import Counter
 ROOT=Path(__file__).resolve().parent
@@ -61,15 +61,32 @@ def accept(id,source):
  c=db();r=c.execute('SELECT * FROM icons WHERE id=?',(id,)).fetchone()
  if not r:raise ValueError('Unknown icon ID')
  if r['status']=='complete':return
- validate(source)
  from vectorize import convert
  out=ROOT/'output'/f"batch-{r['batch']:03d}"/r['filename'];out.parent.mkdir(parents=True,exist_ok=True)
  with tempfile.TemporaryDirectory(prefix='fws-accept-') as folder:
+  cleaned=Path(folder)/'cleaned.png'
+  count=clean_alpha(source,cleaned)
+  if count:
+   original=ROOT/'work'/'originals'/f"{id:04d}-{hashlib.sha256(Path(source).read_bytes()).hexdigest()}.png"
+   original.parent.mkdir(parents=True,exist_ok=True)
+   if not original.exists():shutil.copy2(source,original)
+   print(f'Preserved original: {original}; cleared {count} alpha=1 pixels')
+   source=cleaned
+  validate(source)
   traced=Path(folder)/out.with_suffix('.svg').name
   convert(source,traced)
   if Path(source).resolve()!=out.resolve():shutil.copy2(source,out)
   shutil.copy2(traced,out.with_suffix('.svg'))
  c.execute('UPDATE icons SET status="complete",error="" WHERE id=?',(id,));c.commit();c.close();export()
+def clean_alpha(source,destination):
+ from PIL import Image
+ with Image.open(source) as image:
+  if image.format!='PNG' or image.mode!='RGBA':raise ValueError('Cleanup requires an RGBA PNG')
+  alpha=image.getchannel('A');count=alpha.histogram()[1]
+  if count:
+   image.putalpha(alpha.point(lambda a:0 if a==1 else a))
+   image.save(destination)
+ return count
 def vectorize_batch(batch):
  from vectorize import convert
  rows=[r for r in export() if r['batch']==batch]

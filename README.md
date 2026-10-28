@@ -1,6 +1,6 @@
 # FWS Icon Factory — Codex project
 
-Contains the user's 2,538 original subjects, organized into 254 delivery batches (last batch has 8). Batch 001 contains 10 completed icons in PNG and SVG formats; the remaining 2,528 subjects are pending. This is a local Codex queue and supervisor, not a configured paid API worker. Built-in image-generation availability depends on your Codex environment; a ChatGPT login alone does not guarantee it exists there.
+Contains the user's 2,538 original subjects, organized into 254 delivery batches (last batch has 8). Batches 001–010 contain the first 100 completed icons in PNG and SVG formats; the remaining 2,438 subjects are pending. This is a local Codex queue and supervisor, not a configured paid API worker. Built-in image-generation availability depends on your Codex environment; a ChatGPT login alone does not guarantee it exists there.
 
 ## Open in Codex (recommended)
 1. Extract this complete folder to a permanent location, e.g. `C:\FWS-Icon-Factory`.
@@ -58,3 +58,7 @@ Install requirements.txt (Pillow, VTracer, CairoSVG). CairoSVG also needs the na
 SVGs contain real filled vector paths (smoothed curves, with detailed boundary paths as a fallback when smoothing fails fidelity checks) with exactly #202123 and #C31E25, no embedded raster images. Tracing thresholds alpha at 128, maps visible pixels to the two palette colors and removes tiny speckles. It approximates raster edges and does not reconstruct original design objects or editable stroke centerlines. Transparent gaps are preserved. Each SVG is rendered with CairoSVG and must reach at least 95% intersection-over-union against each source color layer. This checks geometry, not subject accuracy or visual quality; inspect both versions. PNGs remain the original generated images and can have slight color variation.
 
 Run `python -m unittest discover -s tests -v` to verify tracing, transparent holes, fidelity rejection and paired queue delivery.
+
+User-approved alpha cleanup: accept removes only pixels with alpha exactly 1/255, preserves every higher-opacity pixel and archives original PNGs by SHA-256 under work/originals/. All original validation still applies. Revalidate saved rejected images after cleanup without resetting generation attempts.
+
+Combined delivery: `deliverables/FWS-Icons-First-100-PNG-SVG.zip` contains 200 icon files in batch folders. `deliverables/FWS-Icons-First-100-Preview.jpg` is the labeled overview. Progress and generation attempt counts remain authoritative in SQLite.

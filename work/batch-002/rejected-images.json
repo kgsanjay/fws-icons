@@ -1,0 +1,92 @@
+[
+  {
+    "id": 11,
+    "path": "/workspace/generated_images/exec-509d51c8-7fc1-4089-ac67-f2f3b6e6b6cd.png",
+    "alpha_bbox": [
+      49,
+      119,
+      1234,
+      1214
+    ],
+    "visible_alpha_bbox": [
+      234,
+      281,
+      1057,
+      1031
+    ],
+    "edge_nonzero_pixels": 7,
+    "edge_max_alpha": 1
+  },
+  {
+    "id": 11,
+    "path": "/workspace/generated_images/exec-170db194-561a-4d88-8e09-c60db7b09012.png",
+    "alpha_bbox": [
+      25,
+      230,
+      802,
+      844
+    ],
+    "visible_alpha_bbox": [
+      464,
+      463,
+      799,
+      795
+    ],
+    "edge_nonzero_pixels": 1,
+    "edge_max_alpha": 1
+  },
+  {
+    "id": 11,
+    "path": "/workspace/generated_images/exec-55eac67c-2b49-4a1c-a986-2a6958e99dee.png",
+    "alpha_bbox": [
+      47,
+      35,
+      1198,
+      1180
+    ],
+    "visible_alpha_bbox": [
+      256,
+      270,
+      998,
+      999
+    ],
+    "edge_nonzero_pixels": 1,
+    "edge_max_alpha": 1
+  },
+  {
+    "id": 12,
+    "path": "/workspace/generated_images/exec-72106e56-ee86-42c6-b091-8937a3754e13.png",
+    "alpha_bbox": [
+      250,
+      232,
+      1224,
+      1230
+    ],
+    "visible_alpha_bbox": [
+      317,
+      367,
+      938,
+      869
+    ],
+    "edge_nonzero_pixels": 4,
+    "edge_max_alpha": 1
+  },
+  {
+    "id": 12,
+    "path": "/workspace/generated_images/exec-6d498ffe-c9da-4cf9-a8fb-dbf6fc51e626.png",
+    "alpha_bbox": [
+      107,
+      53,
+      1232,
+      1099
+    ],
+    "visible_alpha_bbox": [
+      325,
+      374,
+      929,
+      851
+    ],
+    "edge_nonzero_pixels": 1,
+    "edge_max_alpha": 1
+  }
+]

@@ -1,0 +1,802 @@
+[
+  {
+    "id": 1,
+    "title": "Business Incorporation Services",
+    "filename": "Business-Incorporation-Services.png",
+    "batch": 1,
+    "status": "complete",
+    "attempts": 3
+  },
+  {
+    "id": 2,
+    "title": "Event Registration Services",
+    "filename": "Event-Registration-Services.png",
+    "batch": 1,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 3,
+    "title": "Internet Marketing Services",
+    "filename": "Internet-Marketing-Services.png",
+    "batch": 1,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 4,
+    "title": "Internet Publishing Services",
+    "filename": "Internet-Publishing-Services.png",
+    "batch": 1,
+    "status": "complete",
+    "attempts": 2
+  },
+  {
+    "id": 5,
+    "title": "Visual Communication Services",
+    "filename": "Visual-Communication-Services.png",
+    "batch": 1,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 6,
+    "title": "800 Answering Services",
+    "filename": "800-Answering-Services.png",
+    "batch": 1,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 7,
+    "title": "Adaptable Virtual Receptionist Services",
+    "filename": "Adaptable-Virtual-Receptionist-Services.png",
+    "batch": 1,
+    "status": "complete",
+    "attempts": 2
+  },
+  {
+    "id": 8,
+    "title": "After-hours Call Center Services",
+    "filename": "After-hours-Call-Center-Services.png",
+    "batch": 1,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 9,
+    "title": "AI Monitoring Support Services",
+    "filename": "AI-Monitoring-Support-Services.png",
+    "batch": 1,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 10,
+    "title": "Answering Services",
+    "filename": "Answering-Services.png",
+    "batch": 1,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 11,
+    "title": "Appointment Setting Services",
+    "filename": "Appointment-Setting-Services.png",
+    "batch": 2,
+    "status": "complete",
+    "attempts": 3
+  },
+  {
+    "id": 12,
+    "title": "Audio Monitoring Services",
+    "filename": "Audio-Monitoring-Services.png",
+    "batch": 2,
+    "status": "complete",
+    "attempts": 2
+  },
+  {
+    "id": 13,
+    "title": "Auto Insurance Lead Generation Services",
+    "filename": "Auto-Insurance-Lead-Generation-Services.png",
+    "batch": 2,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 14,
+    "title": "B2B Appointment Setting Services",
+    "filename": "B2B-Appointment-Setting-Services.png",
+    "batch": 2,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 15,
+    "title": "B2B Cold Calling Services Aligned",
+    "filename": "B2B-Cold-Calling-Services-Aligned.png",
+    "batch": 2,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 16,
+    "title": "B2B Lead Generation Services",
+    "filename": "B2B-Lead-Generation-Services.png",
+    "batch": 2,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 17,
+    "title": "B2B Telemarketing Services",
+    "filename": "B2B-Telemarketing-Services.png",
+    "batch": 2,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 18,
+    "title": "B2B Telesales Services",
+    "filename": "B2B-Telesales-Services.png",
+    "batch": 2,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 19,
+    "title": "B2C Appointment Setting Services",
+    "filename": "B2C-Appointment-Setting-Services.png",
+    "batch": 2,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 20,
+    "title": "B2C Cold Calling Services",
+    "filename": "B2C-Cold-Calling-Services.png",
+    "batch": 2,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 21,
+    "title": "B2C Lead Generation Services",
+    "filename": "B2C-Lead-Generation-Services.png",
+    "batch": 3,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 22,
+    "title": "Billing Query Services",
+    "filename": "Billing-Query-Services.png",
+    "batch": 3,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 23,
+    "title": "Business Continuity Planning (BCP) Services",
+    "filename": "Business-Continuity-Planning-BCP-Services.png",
+    "batch": 3,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 24,
+    "title": "Business Process as a Service",
+    "filename": "Business-Process-as-a-Service.png",
+    "batch": 3,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 25,
+    "title": "Business Process Reengineering Services",
+    "filename": "Business-Process-Reengineering-Services.png",
+    "batch": 3,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 26,
+    "title": "Call Auditing Services",
+    "filename": "Call-Auditing-Services.png",
+    "batch": 3,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 27,
+    "title": "Call Center Consulting Solutions",
+    "filename": "Call-Center-Consulting-Solutions.png",
+    "batch": 3,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 28,
+    "title": "Call Center Disaster Recovery Services",
+    "filename": "Call-Center-Disaster-Recovery-Services.png",
+    "batch": 3,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 29,
+    "title": "Call Center Monitoring Services",
+    "filename": "Call-Center-Monitoring-Services.png",
+    "batch": 3,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 30,
+    "title": "Call Center Outsourcing Service",
+    "filename": "Call-Center-Outsourcing-Service.png",
+    "batch": 3,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 31,
+    "title": "Call Center Portfolio",
+    "filename": "Call-Center-Portfolio.png",
+    "batch": 4,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 32,
+    "title": "Call Center Quality Monitoring",
+    "filename": "Call-Center-Quality-Monitoring.png",
+    "batch": 4,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 33,
+    "title": "Call Center Services in the Philippines",
+    "filename": "Call-Center-Services-in-the-Philippines.png",
+    "batch": 4,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 34,
+    "title": "Call Center Technical Support Services",
+    "filename": "Call-Center-Technical-Support-Services.png",
+    "batch": 4,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 35,
+    "title": "Call Quality Analytics Services",
+    "filename": "Call-Quality-Analytics-Services.png",
+    "batch": 4,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 36,
+    "title": "Callcenter Recruitment",
+    "filename": "Callcenter-Recruitment.png",
+    "batch": 4,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 37,
+    "title": "Callcenter Training Services",
+    "filename": "Callcenter-Training-Services.png",
+    "batch": 4,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 38,
+    "title": "Car Insurance Lead Generation Services",
+    "filename": "Car-Insurance-Lead-Generation-Services.png",
+    "batch": 4,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 39,
+    "title": "CATI Services",
+    "filename": "CATI-Services.png",
+    "batch": 4,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 40,
+    "title": "Cctv Monitoring Services",
+    "filename": "Cctv-Monitoring-Services.png",
+    "batch": 4,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 41,
+    "title": "Claims Processing Services",
+    "filename": "Claims-Processing-Services.png",
+    "batch": 5,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 42,
+    "title": "Click to Talk Support Services",
+    "filename": "Click-to-Talk-Support-Services.png",
+    "batch": 5,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 43,
+    "title": "Cloud Contact Center Services",
+    "filename": "Cloud-Contact-Center-Services.png",
+    "batch": 5,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 44,
+    "title": "Cold Calling Services",
+    "filename": "Cold-Calling-Services.png",
+    "batch": 5,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 45,
+    "title": "Cold Canvassing Services",
+    "filename": "Cold-Canvassing-Services.png",
+    "batch": 5,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 46,
+    "title": "Commercial Insurance Lead Generation Services",
+    "filename": "Commercial-Insurance-Lead-Generation-Services.png",
+    "batch": 5,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 47,
+    "title": "Commercial Insurance Telemarketing Services",
+    "filename": "Commercial-Insurance-Telemarketing-Services.png",
+    "batch": 5,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 48,
+    "title": "Complaint Management Services",
+    "filename": "Complaint-Management-Services.png",
+    "batch": 5,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 49,
+    "title": "Consumer Product Support Services",
+    "filename": "Consumer-Product-Support-Services.png",
+    "batch": 5,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 50,
+    "title": "Consumer Response Services",
+    "filename": "Consumer-Response-Services.png",
+    "batch": 5,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 51,
+    "title": "Contact Center Modernization Services",
+    "filename": "Contact-Center-Modernization-Services.png",
+    "batch": 6,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 52,
+    "title": "Contact Center Services",
+    "filename": "Contact-Center-Services.png",
+    "batch": 6,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 53,
+    "title": "Contact Center Transformation Services",
+    "filename": "Contact-Center-Transformation-Services.png",
+    "batch": 6,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 54,
+    "title": "Content Monitoring Support Services",
+    "filename": "Content-Monitoring-Support-Services.png",
+    "batch": 6,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 55,
+    "title": "Customer Acquisition Services",
+    "filename": "Customer-Acquisition-Services.png",
+    "batch": 6,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 56,
+    "title": "Customer Experience CX Transformation Services",
+    "filename": "Customer-Experience-CX-Transformation-Services.png",
+    "batch": 6,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 57,
+    "title": "Customer Follow-up Services",
+    "filename": "Customer-Follow-up-Services.png",
+    "batch": 6,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 58,
+    "title": "Customer Interaction Services",
+    "filename": "Customer-Interaction-Services.png",
+    "batch": 6,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 59,
+    "title": "Customer Loyalty Management Services",
+    "filename": "Customer-Loyalty-Management-Services.png",
+    "batch": 6,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 60,
+    "title": "Customer Retention Services",
+    "filename": "Customer-Retention-Services.png",
+    "batch": 6,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 61,
+    "title": "Customer Satisfaction Survey Services",
+    "filename": "Customer-Satisfaction-Survey-Services.png",
+    "batch": 7,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 62,
+    "title": "Customer Satisfaction Surveys Services",
+    "filename": "Customer-Satisfaction-Surveys-Services.png",
+    "batch": 7,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 63,
+    "title": "Customer Service Representative Services",
+    "filename": "Customer-Service-Representative-Services.png",
+    "batch": 7,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 64,
+    "title": "Customer Support Operations",
+    "filename": "Customer-Support-Operations.png",
+    "batch": 7,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 65,
+    "title": "Data Entry Virtual Assistant Services",
+    "filename": "Data-Entry-Virtual-Assistant-Services.png",
+    "batch": 7,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 66,
+    "title": "Data Validation Services",
+    "filename": "Data-Validation-Services.png",
+    "batch": 7,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 67,
+    "title": "Debt Collection Services",
+    "filename": "Debt-Collection-Services.png",
+    "batch": 7,
+    "status": "complete",
+    "attempts": 2
+  },
+  {
+    "id": 68,
+    "title": "Digital Agent Services",
+    "filename": "Digital-Agent-Services.png",
+    "batch": 7,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 69,
+    "title": "Digital Customer Support Services",
+    "filename": "Digital-Customer-Support-Services.png",
+    "batch": 7,
+    "status": "complete",
+    "attempts": 2
+  },
+  {
+    "id": 70,
+    "title": "Direct Mail Follow up Services",
+    "filename": "Direct-Mail-Follow-up-Services.png",
+    "batch": 7,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 71,
+    "title": "Dynamic Virtual Assistant Services",
+    "filename": "Dynamic-Virtual-Assistant-Services.png",
+    "batch": 8,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 72,
+    "title": "ECommerce Customer Support Services",
+    "filename": "ECommerce-Customer-Support-Services.png",
+    "batch": 8,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 73,
+    "title": "ECommerce Lead Generation Services",
+    "filename": "ECommerce-Lead-Generation-Services.png",
+    "batch": 8,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 74,
+    "title": "Education Sector Lead Generation Services",
+    "filename": "Education-Sector-Lead-Generation-Services.png",
+    "batch": 8,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 75,
+    "title": "Email List Management Services",
+    "filename": "Email-List-Management-Services.png",
+    "batch": 8,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 76,
+    "title": "Enquiry Handling Services",
+    "filename": "Enquiry-Handling-Services.png",
+    "batch": 8,
+    "status": "complete",
+    "attempts": 2
+  },
+  {
+    "id": 77,
+    "title": "Enterprise Email Support Services",
+    "filename": "Enterprise-Email-Support-Services.png",
+    "batch": 8,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 78,
+    "title": "Health Insurance Lead Generation Services",
+    "filename": "Health-Insurance-Lead-Generation-Services.png",
+    "batch": 8,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 79,
+    "title": "Home Insurance Lead Generation Services",
+    "filename": "Home-Insurance-Lead-Generation-Services.png",
+    "batch": 8,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 80,
+    "title": "Hotline Services",
+    "filename": "Hotline-Services.png",
+    "batch": 8,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 81,
+    "title": "Inbound Call Center Services",
+    "filename": "Inbound-Call-Center-Services.png",
+    "batch": 9,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 82,
+    "title": "Inbound Sales Services",
+    "filename": "Inbound-Sales-Services.png",
+    "batch": 9,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 83,
+    "title": "Inbound Voice",
+    "filename": "Inbound-Voice.png",
+    "batch": 9,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 84,
+    "title": "Insurance Lead Generation Services",
+    "filename": "Insurance-Lead-Generation-Services.png",
+    "batch": 9,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 85,
+    "title": "Insurance Telemarketing Services",
+    "filename": "Insurance-Telemarketing-Services.png",
+    "batch": 9,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 86,
+    "title": "Interactive Voice Response Services",
+    "filename": "Interactive-Voice-Response-Services.png",
+    "batch": 9,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 87,
+    "title": "Lead Generation for Insurance Agents",
+    "filename": "Lead-Generation-for-Insurance-Agents.png",
+    "batch": 9,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 88,
+    "title": "Lead Generation for IT Companies",
+    "filename": "Lead-Generation-for-IT-Companies.png",
+    "batch": 9,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 89,
+    "title": "Lead Generation for Logistics Transportation Industry",
+    "filename": "Lead-Generation-for-Logistics-Transportation-Industry.png",
+    "batch": 9,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 90,
+    "title": "Lead Generation for Small Business",
+    "filename": "Lead-Generation-for-Small-Business.png",
+    "batch": 9,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 91,
+    "title": "Lead Generation for the Chemical and Manufacturing Industry",
+    "filename": "Lead-Generation-for-the-Chemical-and-Manufacturing-Industry.png",
+    "batch": 10,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 92,
+    "title": "Lead Generation for Travel Hospitality Industry",
+    "filename": "Lead-Generation-for-Travel-Hospitality-Industry.png",
+    "batch": 10,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 93,
+    "title": "Lead Generation Services",
+    "filename": "Lead-Generation-Services.png",
+    "batch": 10,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 94,
+    "title": "Lead Generation Services for Bfsi Industry",
+    "filename": "Lead-Generation-Services-for-Bfsi-Industry.png",
+    "batch": 10,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 95,
+    "title": "Lead Qualification Services",
+    "filename": "Lead-Qualification-Services.png",
+    "batch": 10,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 96,
+    "title": "Life Insurance Lead Generation Services",
+    "filename": "Life-Insurance-Lead-Generation-Services.png",
+    "batch": 10,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 97,
+    "title": "Live Chat Support Services",
+    "filename": "Live-Chat-Support-Services.png",
+    "batch": 10,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 98,
+    "title": "Local Lead Generation Services",
+    "filename": "Local-Lead-Generation-Services.png",
+    "batch": 10,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 99,
+    "title": "Loyalty Program Management Services",
+    "filename": "Loyalty-Program-Management-Services.png",
+    "batch": 10,
+    "status": "complete",
+    "attempts": 1
+  },
+  {
+    "id": 100,
+    "title": "Market Intelligence Services",
+    "filename": "Market-Intelligence-Services.png",
+    "batch": 10,
+    "status": "complete",
+    "attempts": 1
+  }
+]
