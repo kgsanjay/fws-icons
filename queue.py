@@ -78,6 +78,9 @@ def accept(id,source):
   if Path(source).resolve()!=out.resolve():shutil.copy2(source,out)
   shutil.copy2(traced,out.with_suffix('.svg'))
  c.execute('UPDATE icons SET status="complete",error="" WHERE id=?',(id,));c.commit();c.close();export()
+ if ROOT.resolve()==Path(__file__).resolve().parent/'catalog':
+  from tools.build_gallery import build
+  build()
 def clean_alpha(source,destination):
  from PIL import Image
  with Image.open(source) as image:
@@ -120,14 +123,15 @@ def bundle(batch):
   if z.testzip():raise ValueError('Corrupt archive')
  tmp.replace(zp);sheet.save(dest/f'FWS-Icons-Batch-{batch:03d}-Preview.jpg');print(zp)
 def main():
- p=argparse.ArgumentParser();s=p.add_subparsers(dest='cmd',required=True)
+ global ROOT
+ p=argparse.ArgumentParser();p.add_argument('--root',type=Path,default=ROOT,help='Queue folder; use catalog for the 4,176-entry master list');s=p.add_subparsers(dest='cmd',required=True)
  for name in ['init','status','next']:s.add_parser(name)
  for name in ['packet','bundle','vectorize']:
   q=s.add_parser(name);q.add_argument('batch',type=int)
  q=s.add_parser('accept');q.add_argument('id',type=int);q.add_argument('source',type=Path)
  q=s.add_parser('attempt');q.add_argument('id',type=int)
  q=s.add_parser('fail');q.add_argument('id',type=int);q.add_argument('reason')
- a=p.parse_args();init()
+ a=p.parse_args();ROOT=a.root.resolve();init()
  if a.cmd=='status':print(json.dumps(dict(Counter(r['status'] for r in export()))))
  elif a.cmd=='next':
   rows=[r for r in export() if r['status']!='complete' and r['attempts']<3];print(min((r['batch'] for r in rows),default=0))

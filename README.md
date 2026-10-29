@@ -1,3 +1,53 @@
+# FWS Icons — gallery and master list
+
+The gallery is a responsive, static website using our custom PNG/SVG artwork. It includes search, suggested categories, pagination, light/dark/transparency previews, an icon detail dialog, SVG source copy, and individual PNG/SVG downloads. Categories are inferred from titles; pending subjects show no fabricated artwork.
+
+## Run the gallery
+
+```bash
+cd /workspace/fws-icons
+source /workspace/fws-icons-venv/bin/activate
+python tools/build_gallery.py
+python -m http.server 8080 --bind 0.0.0.0
+```
+
+Open the served site in your browser. Serving the repository root is required for image and download paths. Opening index.html directly from disk cannot fetch the JSON index. No frontend build, account, API key, or external CDN is needed. The site has been tested locally; no public deployment or GitHub Pages publication is configured by this change.
+
+## New authoritative list: 4,176 subjects
+
+`catalog/original-icon-names.txt` preserves the uploaded list; `catalog/services.txt` stores the same titles without bracket wrappers, in their original order. `catalog/progress.sqlite` is authoritative for this list. The previous 2,538-entry queue, 100 completed pairs, files and progress remain untouched at the repository root.
+
+The importer reused exactly four completed title matches and recorded their legacy IDs in `catalog/migration.json`. Never assume that the old first 100 all belong to the new list. The gallery's Available icons view combines unique ready titles across both collections; Full master list shows all 4,176 subjects and their availability. Currently 14 master subjects are ready (four reused, ten newly created), leaving 4,162 pending; the combined gallery contains 110 unique available pairs.
+
+Use the explicit queue folder for every new-list command:
+
+```bash
+python queue.py --root catalog status
+python queue.py --root catalog next
+python queue.py --root catalog packet 2
+python queue.py --root catalog attempt ID
+python queue.py --root catalog accept ID /absolute/path/to/generated.png
+python queue.py --root catalog fail ID "reason"
+python queue.py --root catalog bundle BATCH
+```
+
+Accepted master icons refresh `web/catalog.json` automatically. Run `python tools/build_gallery.py` after manual data changes. New-list output, original images, prompt packets and deliverables live under `catalog/`; old files remain in their existing locations. The first new-list batch is `catalog/deliverables/FWS-Icons-Batch-001.zip` with ten PNG/SVG pairs. PNG alpha cleanup and SVG checks apply to both queues. Never reset attempts or regenerate completed artwork.
+
+`python tools/import_catalog.py INPUT.txt` initializes an empty catalog only and refuses to overwrite existing progress. Do not rerun it to resume. The optional Codex supervisor accepts `--root catalog` and still requires separately available CLI authentication and image-generation capability; it is not a background service and has not been verified here.
+
+## Verification
+
+```bash
+python -m unittest discover -s tests -v
+node --check web/app.js
+# With a server on port 8080, Playwright installed, and Chromium at /usr/bin/chromium:
+python tools/smoke_gallery.py
+```
+
+The browser checks exercise actual search, availability filters, empty results, modal controls, preview switching, SVG download and mobile overflow. Playwright is optional validation tooling, not a website runtime dependency. Startup does not launch generation. Creating thousands of icons requires resumable active sessions and available image-generation usage.
+
+---
+
 # FWS Icon Factory — Codex project
 
 Contains the user's 2,538 original subjects, organized into 254 delivery batches (last batch has 8). Batches 001–010 contain the first 100 completed icons in PNG and SVG formats; the remaining 2,438 subjects are pending. This is a local Codex queue and supervisor, not a configured paid API worker. Built-in image-generation availability depends on your Codex environment; a ChatGPT login alone does not guarantee it exists there.
