@@ -1,6 +1,6 @@
 {
   "first_100": {
-    "status": "complete",
+    "status": "pushed",
     "ids": [
       11,
       12,
@@ -103,10 +103,11 @@
       109,
       110
     ],
-    "zip": "catalog/deliverables/FWS-Icons-New-100-001.zip"
+    "zip": "catalog/deliverables/FWS-Icons-New-100-001.zip",
+    "commit": "e1d95359184a39e810e8f0920cac7acfe4e0d650"
   },
   "second_100": {
-    "status": "pending",
+    "status": "paused_at_user_request",
     "ids": [
       111,
       112,
@@ -208,8 +209,31 @@
       210,
       211,
       212
-    ]
+    ],
+    "completed_ids": [
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127
+    ],
+    "completed_count": 17
   },
   "earlier_partial_push": "e35d027",
-  "style": "Original outline; PNG first with traced SVG companions"
+  "style": "Original outline; PNG first with traced SVG companions",
+  "production_status": "stopped_at_user_request",
+  "interrupted_id": 128,
+  "ready_distinct_pairs": 227
 }

@@ -6,7 +6,7 @@ A searchable custom icon gallery with original transparent PNG artwork and trace
 
 ## Current collection
 
-The user preferred the original PNG-generated artwork and requested its restoration. The gallery has **210 distinct PNG/SVG pairs**: 100 original icons under `legacy/` and 114 ready master entries, with four shared subjects counted once. The authoritative master list contains **4,176 subjects: 114 complete and 4,062 remaining**. The current production run has completed its first **100 new outline PNG/SVG pairs (IDs 11–110)** and will continue the following 100 pending subjects.
+The user preferred the original PNG-generated artwork and requested its restoration. The gallery has **227 distinct PNG/SVG pairs**: 100 original icons under `legacy/` and 131 ready master entries, with four shared subjects counted once. The authoritative master list contains **4,176 subjects: 131 complete and 4,045 remaining**. The current production run has completed its first **100 new outline PNG/SVG pairs (IDs 11–110)** plus **17 additional pairs (IDs 111–127)**. Generation is **paused at the user’s request**; do not create more icons until explicitly instructed.
 
 The 20 native SVG revisions (IDs 11–30) were removed from the gallery and have now been replaced with PNG-first artwork. Their files were backed up outside the repository before removal. Attempt counts were preserved. `catalog/work/png-restoration.json` records the recovery; native revision source/audit files are historical.
 

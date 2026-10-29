@@ -28,3 +28,7 @@ Batch 9 finance subjects keep separate compositions for incoming receivables, ou
 Batch 10 includes two visually rejected rasters: ID 92 uneven coin marks and ID 95 crowded NLP detail/stray marks. Their clean replacement PNGs were accepted without manual artwork edits; both attempts remain recorded. Generic additional-resource headings are represented by resource folders, books and browser controls. Exact concepts are in generated-ID.json.
 
 Batch 11 completes the first requested 100 new PNG-first outline icons (IDs 11–110). Unusual headings retain source wording in metadata and use literal generic process/service illustrations. No filled variants were made. All rendered PNGs were visually reviewed; alpha=1 cleanup is the only raster cleanup.
+
+Batch 12: software-brand service subjects use custom unbranded editing/billing metaphors without external logos. Image editing, real-estate retouching, infrastructure and testing each have their own composition. Detailed prompt concepts and sources are preserved in generated-ID.json.
+
+User stopped production and requested a push of completed work. Saved IDs 111–127 as PNG/SVG pairs. No completed PNG was recovered for interrupted ID 128; returned to pending without resetting its attempt. No further generation authorized until explicitly resumed.
