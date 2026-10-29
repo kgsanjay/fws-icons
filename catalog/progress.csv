@@ -1,34 +1,34 @@
 ﻿id,title,filename,batch,status,attempts,error
-1,.NET Development Services,NET-Development-Services.png,1,complete,1,
-2,.NET MVC Development Services,NET-MVC-Development-Services.png,1,complete,1,
-3,10 Reasons to Choose Flatworld Solutions for Pediatric Billing Services,10-Reasons-to-Choose-Flatworld-Solutions-for-Pediatric-Billing-Services.png,1,complete,1,
-4,10. Keep Innovating,10-Keep-Innovating.png,1,complete,1,
-5,100% accurate conflict resolution,100-accurate-conflict-resolution.png,1,complete,1,
-6,100% Data Safety,100-Data-Safety.png,1,complete,1,
-7,100% Data Security,100-Data-Security.png,1,complete,1,
-8,100% Information Security,100-Information-Security.png,1,complete,1,
-9,100% Redundancy at our delivery centers,100-Redundancy-at-our-delivery-centers.png,1,complete,1,
-10,2. Full-Time Equivalent (FTE) Rates,2-Full-Time-Equivalent-FTE-Rates.png,1,complete,1,
+1,.NET Development Services,NET-Development-Services.png,1,pending,1,Previous traced artwork retired; awaiting native SVG
+2,.NET MVC Development Services,NET-MVC-Development-Services.png,1,pending,1,Previous traced artwork retired; awaiting native SVG
+3,10 Reasons to Choose Flatworld Solutions for Pediatric Billing Services,10-Reasons-to-Choose-Flatworld-Solutions-for-Pediatric-Billing-Services.png,1,pending,1,Previous traced artwork retired; awaiting native SVG
+4,10. Keep Innovating,10-Keep-Innovating.png,1,pending,1,Previous traced artwork retired; awaiting native SVG
+5,100% accurate conflict resolution,100-accurate-conflict-resolution.png,1,pending,1,Previous traced artwork retired; awaiting native SVG
+6,100% Data Safety,100-Data-Safety.png,1,pending,1,Previous traced artwork retired; awaiting native SVG
+7,100% Data Security,100-Data-Security.png,1,pending,1,Previous traced artwork retired; awaiting native SVG
+8,100% Information Security,100-Information-Security.png,1,pending,1,Previous traced artwork retired; awaiting native SVG
+9,100% Redundancy at our delivery centers,100-Redundancy-at-our-delivery-centers.png,1,pending,1,Previous traced artwork retired; awaiting native SVG
+10,2. Full-Time Equivalent (FTE) Rates,2-Full-Time-Equivalent-FTE-Rates.png,1,pending,1,Previous traced artwork retired; awaiting native SVG
 11,2. Transition,2-Transition.png,2,complete,1,
-12,24-Hour Answering Services,24-Hour-Answering-Services.png,2,pending,0,
-13,24-hour TATs,24-hour-TATs.png,2,pending,0,
-14,24/7 Access to Support,24-7-Access-to-Support.png,2,pending,0,
-15,24/7 Assistance,24-7-Assistance.png,2,pending,0,
-16,24/7 Availability,24-7-Availability.png,2,pending,0,
-17,24/7 Customer Support,24-7-Customer-Support.png,2,pending,0,
-18,24/7 Customer Support Services,24-7-Customer-Support-Services.png,2,pending,0,
-19,24/7 Dedicated Assistance,24-7-Dedicated-Assistance.png,2,pending,0,
-20,24/7 Ecommerce Support,24-7-Ecommerce-Support.png,2,pending,0,
-21,24/7 Global Coverage Across Channels,24-7-Global-Coverage-Across-Channels.png,3,pending,0,
-22,24/7 Support,24-7-Support.png,3,pending,0,
-23,"24/7 Support, 365 Days a Year",24-7-Support-365-Days-a-Year.png,3,pending,0,
-24,24/7/365 Support,24-7-365-Support.png,3,pending,0,
-25,27/7 Availability,27-7-Availability.png,3,pending,0,
-26,2D Animation Services,2D-Animation-Services.png,3,pending,0,
-27,2D Drafting,2D-Drafting.png,3,pending,0,
-28,2D Drafting Services,2D-Drafting-Services.png,3,pending,0,
-29,2D Medical Animation Process,2D-Medical-Animation-Process.png,3,pending,0,
-30,2D Medical Animation Services,2D-Medical-Animation-Services.png,3,pending,0,
+12,24-Hour Answering Services,24-Hour-Answering-Services.png,2,complete,1,
+13,24-hour TATs,24-hour-TATs.png,2,complete,1,
+14,24/7 Access to Support,24-7-Access-to-Support.png,2,complete,1,
+15,24/7 Assistance,24-7-Assistance.png,2,complete,1,
+16,24/7 Availability,24-7-Availability.png,2,complete,1,
+17,24/7 Customer Support,24-7-Customer-Support.png,2,complete,1,
+18,24/7 Customer Support Services,24-7-Customer-Support-Services.png,2,complete,1,
+19,24/7 Dedicated Assistance,24-7-Dedicated-Assistance.png,2,complete,1,
+20,24/7 Ecommerce Support,24-7-Ecommerce-Support.png,2,complete,1,
+21,24/7 Global Coverage Across Channels,24-7-Global-Coverage-Across-Channels.png,3,complete,1,
+22,24/7 Support,24-7-Support.png,3,complete,1,
+23,"24/7 Support, 365 Days a Year",24-7-Support-365-Days-a-Year.png,3,complete,1,
+24,24/7/365 Support,24-7-365-Support.png,3,complete,1,
+25,27/7 Availability,27-7-Availability.png,3,complete,1,
+26,2D Animation Services,2D-Animation-Services.png,3,complete,1,
+27,2D Drafting,2D-Drafting.png,3,complete,1,
+28,2D Drafting Services,2D-Drafting-Services.png,3,complete,1,
+29,2D Medical Animation Process,2D-Medical-Animation-Process.png,3,complete,1,
+30,2D Medical Animation Services,2D-Medical-Animation-Services.png,3,complete,1,
 31,3 Things We Take Care of While Developing iBeacon Apps,3-Things-We-Take-Care-of-While-Developing-iBeacon-Apps.png,4,pending,0,
 32,3-tier Quality Support Model,3-tier-Quality-Support-Model.png,4,pending,0,
 33,360 Video Editing Services,360-Video-Editing-Services.png,4,pending,0,
@@ -151,7 +151,7 @@
 150,Agile QA Team Integration,Agile-QA-Team-Integration.png,15,pending,0,
 151,AI Consulting for Advanced Manufacturing Needs,AI-Consulting-for-Advanced-Manufacturing-Needs.png,16,pending,0,
 152,AI for IT Operations,AI-for-IT-Operations.png,16,pending,0,
-153,AI Monitoring Support Services,AI-Monitoring-Support-Services.png,16,complete,0,
+153,AI Monitoring Support Services,AI-Monitoring-Support-Services.png,16,pending,0,Previous traced artwork retired; awaiting native SVG
 154,AI Safety and Evaluation Data Services,AI-Safety-and-Evaluation-Data-Services.png,16,pending,0,
 155,AI Services for Connected Medical Devices,AI-Services-for-Connected-Medical-Devices.png,16,pending,0,
 156,AI-Augmented Data Entry and Ingestion Capabilities,AI-Augmented-Data-Entry-and-Ingestion-Capabilities.png,16,pending,0,
@@ -205,7 +205,7 @@
 204,Applied Analytics,Applied-Analytics.png,21,pending,0,
 205,Applying Final Touches,Applying-Final-Touches.png,21,pending,0,
 206,Appointment Scheduling Services,Appointment-Scheduling-Services.png,21,pending,0,
-207,Appointment Setting Services,Appointment-Setting-Services.png,21,complete,0,
+207,Appointment Setting Services,Appointment-Setting-Services.png,21,pending,0,Previous traced artwork retired; awaiting native SVG
 208,Approval and Registration,Approval-and-Registration.png,21,pending,0,
 209,Approval of Drafted Forms,Approval-of-Drafted-Forms.png,21,pending,0,
 210,Approval Process,Approval-Process.png,21,pending,0,
@@ -630,7 +630,7 @@
 629,Customer Insights,Customer-Insights.png,63,pending,0,
 630,Customer Preferences,Customer-Preferences.png,63,pending,0,
 631,Customer Satisfaction,Customer-Satisfaction.png,64,pending,0,
-632,Customer Satisfaction Survey Services,Customer-Satisfaction-Survey-Services.png,64,complete,0,
+632,Customer Satisfaction Survey Services,Customer-Satisfaction-Survey-Services.png,64,pending,0,Previous traced artwork retired; awaiting native SVG
 633,Customer Service,Customer-Service.png,64,pending,0,
 634,Customer Support,Customer-Support.png,64,pending,0,
 635,Customer Support Services,Customer-Support-Services.png,64,pending,0,
@@ -1280,7 +1280,7 @@
 1279,Law Office Management Services:,Law-Office-Management-Services.png,128,pending,0,
 1280,Lead Follow-up,Lead-Follow-up.png,128,pending,0,
 1281,Lead Generation Companies,Lead-Generation-Companies.png,129,pending,0,
-1282,Lead Generation Services,Lead-Generation-Services.png,129,complete,0,
+1282,Lead Generation Services,Lead-Generation-Services.png,129,pending,0,Previous traced artwork retired; awaiting native SVG
 1283,Lead Nurturing,Lead-Nurturing.png,129,pending,0,
 1284,Lead Scoring Services,Lead-Scoring-Services.png,129,pending,0,
 1285,Lean Six Sigma-Certified Retail Support Agents,Lean-Six-Sigma-Certified-Retail-Support-Agents.png,129,pending,0,

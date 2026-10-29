@@ -22,5 +22,23 @@
       "legacy_id": 93
     }
   ],
-  "legacy_queue": "../progress.sqlite"
+  "legacy_queue": "../progress.sqlite",
+  "reused_artwork_retired": true,
+  "retired_master_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    153,
+    207,
+    632,
+    1282
+  ],
+  "policy": "Old traced artwork removed; listed subjects are pending native redesign"
 }

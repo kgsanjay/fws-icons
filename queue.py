@@ -2,7 +2,8 @@
 import argparse,csv,hashlib,json,re,shutil,sqlite3,tempfile,unicodedata,zipfile
 from pathlib import Path
 from collections import Counter
-ROOT=Path(__file__).resolve().parent
+BASE=Path(__file__).resolve().parent
+ROOT=BASE/'catalog' if (BASE/'catalog').is_dir() else BASE
 STYLE='''Create exactly ONE premium corporate website service icon for: {title}.
 Understand the service and choose one recognizable primary object with at most two minimal supporting elements. Distinct compact visual metaphor, professional enterprise aesthetic.
 Square canvas, centered icon occupying approximately 60–65%, generous equal margins. Clean flat 2D vector-style outlines, consistent medium-thin geometric strokes, rounded caps and joins. Mostly outline construction with tiny controlled fills only.

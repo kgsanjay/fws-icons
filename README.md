@@ -1,14 +1,16 @@
-# FWS Icons — gallery and master list
+# FWS Icons
 
-The gallery is a responsive, static website using our custom PNG/SVG artwork. It includes search, suggested categories, pagination, light/dark/transparency previews, an icon detail dialog, SVG source copy, and individual PNG/SVG downloads. Categories are inferred from titles; pending subjects show no fabricated artwork.
+A searchable custom icon gallery with native SVG sources and matching transparent PNG exports.
 
-## Search icons on GitHub Pages
+**Gallery:** https://kgsanjay.github.io/fws-icons/
 
-Gallery URL after enabling GitHub Pages: **https://kgsanjay.github.io/fws-icons/**
+## Current collection
 
-One-time repository setting: open **Settings → Pages → Build and deployment**, choose **Deploy from a branch**, select **main** and **/ (root)**, then **Save**. GitHub will build and publish the site; use the URL after Pages reports deployment success. This setting has not been enabled or verified by the agent because GitHub API access is blocked in the cloud environment.
+The master list contains **4,176 subjects**. **20 native SVG/PNG pairs** are complete (master IDs 11–30); **4,156 subjects** are pending.
 
-The root `.nojekyll` file tells GitHub Pages to serve the existing static gallery directly. Search, filters, previews, and PNG/SVG downloads use repository-relative paths and work under `/fws-icons/`. No paid hosting is needed. Future pushes to `main` republish the site automatically once this setting is active. Generation still requires an active Codex session; the website only browses saved artwork.
+At the user's request, raster-generated/traced icons and their old downloads, previews, original-image copies, and obsolete queue were removed from the current repository. Four reused traces and the first ten traced master icons were returned to pending for native redesign. Existing authoring attempt counts were preserved. The remaining completed SVG-first artwork was kept intact.
+
+`catalog/services.txt` holds the authoritative titles in original order. `catalog/original-icon-names.txt` preserves the uploaded list. `catalog/progress.sqlite` is authoritative; `catalog/progress.csv` is its readable export.
 
 ## Run the gallery
 
@@ -19,126 +21,47 @@ python tools/build_gallery.py
 python -m http.server 8080 --bind 0.0.0.0
 ```
 
-Open the served site in your browser. Serving the repository root is required for image and download paths. Opening index.html directly from disk cannot fetch the JSON index. No frontend build, account, API key, or external CDN is needed. The site has been tested locally; no public deployment or GitHub Pages publication is configured by this change.
+Serve the repository root so image and download paths resolve. The gallery has search, categories, availability filters, pagination, SVG/PNG preview, and individual downloads. Pending entries have no downloadable artwork. There is no frontend build, external CDN, API key, or account requirement.
 
-## Customize an icon before downloading
+GitHub Pages uses **main → / (root)** with `.nojekyll`. Pushes republish after the Pages deployment finishes.
 
-Open a ready icon to choose a square export size from 16–4096 px, use common-size presets, change primary/accent colors, or select a transparent/solid-color background. The live preview, copied SVG source, and SVG/PNG downloads reflect these settings. SVG retains its original viewBox and vector paths; PNG is rendered directly from that vector at the selected pixel dimensions. The original source files and queue artwork are never changed; separate Original SVG/PNG links remain available. Reset restores 512 px, charcoal/crimson, and transparency; settings reset for each icon. These controls work in the browser on GitHub Pages without a server or paid API.
+## Custom exports
 
-Browser export checks (with the gallery server running): `python tools/test_custom_exports.py`. They inspect actual downloaded file dimensions, colors, alpha and SVG paths, plus validation limits, copying, presets, reset, and mobile fit.
+Open a ready icon to choose **16–4096 px**, primary/accent colors, and a transparent or solid background. The preview, copied SVG and downloads use those settings. SVG preserves its vector paths and viewBox; PNG is rendered from the customized SVG. Stroke and fill colors are supported. Source files stay unchanged; separate original downloads remain available.
 
-## Current production workflow: SVG first → PNG export
+The **Download all icons** button downloads `catalog/deliverables/FWS-Native-Icons-All.zip`, rebuilt from current ready pairs whenever the gallery index is refreshed. Completed batches have separate ZIPs and previews under `catalog/deliverables/`.
 
-New master-list icons are authored as native SVG geometry. PNGs are exported directly from that SVG, not generated separately and traced. The older PNG-first instructions below describe the historical collection only.
-
-```bash
-python queue.py --root catalog packet BATCH
-python queue.py --root catalog attempt ID
-# Author and visually inspect catalog/work/.../subject.svg
-python queue.py --root catalog accept-svg ID catalog/work/.../subject.svg --size 1024
-python queue.py --root catalog bundle BATCH
-```
-
-Use the 128-unit square design grid, consistent 2.5-unit round strokes, charcoal/crimson, transparent space, aligned elements and clear joins. Native validation permits simple geometry only and verifies one stroke width, round caps/joins, and palette colors. PNG validation checks transparency, margins and color presence. Pair validation rerenders SVG and verifies exact raster equality. Completion is recorded only after both formats pass. No image-generation or tracing call is used for new master icons; authored sources still require visual review at small and large sizes.
-
-The gallery customizer handles stroke and fill colors. Existing completed traced pairs, queue attempts, and original files remain untouched. Bundling supports mixed historical and native pairs; do not run vectorize on the master catalog. PNG-first accept is blocked for pending master entries. Default PNG production output is 1024×1024; the website supports other export sizes.
-
-## New authoritative list: 4,176 subjects
-
-`catalog/original-icon-names.txt` preserves the uploaded list; `catalog/services.txt` stores the same titles without bracket wrappers, in their original order. `catalog/progress.sqlite` is authoritative for this list. The previous 2,538-entry queue, 100 completed pairs, files and progress remain untouched at the repository root.
-
-The initial importer reused exactly four completed title matches and recorded their legacy IDs in `catalog/migration.json`. Never assume that the old first 100 all belong to the new list. The gallery's Available icons view combines unique ready titles across both collections; Full master list shows all 4,176 subjects and their availability. Currently 15 master subjects are ready (four reused, ten raster-generated/traced, and one native SVG-first), leaving 4,161 pending; the combined gallery contains 111 unique available pairs.
-
-Use the explicit queue folder for every new-list command:
+## SVG-first production
 
 ```bash
-python queue.py --root catalog status
-python queue.py --root catalog next
-python queue.py --root catalog packet 2
-python queue.py --root catalog attempt ID
-python queue.py --root catalog accept-svg ID /absolute/path/to/authored.svg --size 1024
-python queue.py --root catalog fail ID "reason"
-python queue.py --root catalog bundle BATCH
+python queue.py status
+python queue.py next
+python queue.py packet BATCH
+python queue.py attempt ID
+# Author and visually inspect catalog/work/batch-NNN/ID.svg
+python queue.py accept-svg ID catalog/work/batch-NNN/ID.svg --size 1024
+python queue.py bundle BATCH
 ```
 
-Accepted master icons refresh `web/catalog.json` automatically. Run `python tools/build_gallery.py` after manual data changes. New-list output, original images, prompt packets and deliverables live under `catalog/`; old files remain in their existing locations. The first new-list batch is `catalog/deliverables/FWS-Icons-Batch-001.zip` with ten PNG/SVG pairs. Legacy PNG alpha cleanup applies to the old workflow; new native SVGs produce PNG directly without cleanup. Never reset attempts or regenerate completed artwork.
+Commands default to `catalog/`; `--root catalog` can also be supplied before the command. New master icons require native SVG-first authoring. PNG-first acceptance and retracing are blocked. Never regenerate completed artwork or reset attempts to bypass validation.
 
-`python tools/import_catalog.py INPUT.txt` initializes an empty catalog only and refuses to overwrite existing progress. Do not rerun it to resume. The optional Codex supervisor accepts `--root catalog` and still requires separately available CLI authentication and image-generation capability; it is not a background service and has not been verified here.
+Use a square `viewBox="0 0 128 128"`, `fill="none"`, consistent 2.5-unit strokes, round caps and joins, and only charcoal **#202123** / crimson **#C31E25**. Use simple geometry with generous margins, aligned elements and clear joins. Avoid touching contours, text, logos, scripts, CSS, transforms, external resources, and raster embedding. Inspect at small and large sizes; numerical stroke consistency alone does not prove optical quality.
 
-## Verification
+Acceptance validates native geometry and strokes, exports a 1024×1024 transparent PNG, checks colors/margins, and verifies the PNG is an exact SVG render. It saves each passing pair immediately, updates progress and rebuilds the gallery and all-icon ZIP. Source authoring and visual review take most of the time; PNG export is automatic and does not use an image-generation service.
+
+`tools/import_catalog.py` initializes an empty queue only and refuses to overwrite progress. It no longer reuses retired legacy artwork. Do not rerun it to resume.
+
+The optional `run_batches.py` supervisor requires separately available, authenticated Codex CLI access and has not been verified here. It is not a persistent background service.
+
+## Validation
 
 ```bash
 python -m unittest discover -s tests -v
 node --check web/app.js
-# With a server on port 8080, Playwright installed, and Chromium at /usr/bin/chromium:
+node --check web/export.js
+# With the gallery served on port 8080, Playwright installed and Chromium at /usr/bin/chromium:
 python tools/smoke_gallery.py
+python tools/test_custom_exports.py
 ```
 
-The browser checks exercise actual search, availability filters, empty results, modal controls, preview switching, SVG download and mobile overflow. Playwright is optional validation tooling, not a website runtime dependency. Startup does not launch generation. Creating thousands of icons requires resumable active sessions and available image-generation usage.
-
----
-
-# Historical PNG-first workflow (legacy collection)
-
-Contains the user's 2,538 original subjects, organized into 254 delivery batches (last batch has 8). Batches 001–010 contain the first 100 completed icons in PNG and SVG formats; the remaining 2,438 subjects are pending. This is a local Codex queue and supervisor, not a configured paid API worker. Built-in image-generation availability depends on your Codex environment; a ChatGPT login alone does not guarantee it exists there.
-
-## Open in Codex (recommended)
-1. Extract this complete folder to a permanent location, e.g. `C:\FWS-Icon-Factory`.
-2. Install Python 3.10+ and run `python -m pip install -r requirements.txt` in this folder. On Windows use `py` instead of `python` if needed.
-3. Open this folder as a project in Codex. Optionally add one approved style icon named `reference.png`.
-4. Paste the complete contents of START-CODEX.txt into Codex. It checks image-generation availability and processes batches, saving after each icon. No API keys are included or required by the queue itself.
-5. To resume after interruption, reopen the same folder and use the same prompt. Keep progress.sqlite and output together. Keep the computer awake and connected while running.
-
-## CLI supervisor (optional)
-Requires an installed, authenticated Codex CLI with image-generation tools available in non-interactive mode.
-
-```
-python run_batches.py
-python run_batches.py --all
-```
-
-The first command asks Codex to process one pending batch. The second continues through eligible batches. It stops when a Codex call fails or makes no progress. It is NOT an unlimited background service and cannot overcome usage limits. Ctrl+C stops; completed files remain saved. No external messages are sent. If the image generator is unavailable, Codex should stop rather than use an API silently. Configure permissions for the local project as appropriate; the launcher uses workspace-write.
-
-## Queue commands
-
-```
-python queue.py status
-python queue.py next
-python queue.py packet 1
-python queue.py attempt 1
-python queue.py accept 1 /absolute/path/to/generated.png
-python queue.py fail 1 "Reason"
-python queue.py vectorize 1  # backfill SVGs for previously completed PNGs
-python queue.py bundle 1
-```
-
-`packet` prepares jobs and prompt files, not images. `attempt` records each actual generation call; maximum three per icon. `accept` validates and copies the PNG and automatically creates and validates its paired SVG before recording completion; all-white backgrounds and RGB files are rejected. Completion is recorded immediately in SQLite, and progress.csv is refreshed. Original titles and sanitized unique filenames are mapped in the CSV; filename collisions get numeric IDs. Do not run multiple operators against the same folder.
-
-## Deliverables
-- output/batch-001/*.png — original individually named transparent icons
-- output/batch-001/*.svg — paired scalable vector paths, with the same filenames
-- deliverables/FWS-Icons-Batch-001.zip — contains both formats; created only when all batch items and SVG checks pass
-- deliverables/FWS-Icons-Batch-001-Preview.jpg — white contact sheet with service labels for review
-- progress.csv — readable status; progress.sqlite is authoritative
-- work/ — generated prompt packets and notes
-
-Technical checks verify PNG format, square canvas, alpha, visible color presence, absence of large white fills, and margins. They do NOT guarantee exact hex colors, accurate subjects, clean linework or absence of text. Codex must visually inspect each icon. Preview labels are outside the icon PNGs. A request interrupted before its file is saved may need regeneration and consume usage again. Built-in usage limits still apply. No dollar-budget cap or API billing monitor is implemented because no API backend is configured.
-
-## Future API mode
-For long unattended production you may later choose an API backend, model, image dimensions and spending cap explicitly. This package does not select a fallback model or make API calls. Do not paste API keys in chat or commit credentials. Existing imagegen CLI skills should be used if API mode is configured in Codex.
-
-Official CLI documentation: https://learn.chatgpt.com/docs/non-interactive-mode
-
-## SVG conversion
-
-Install requirements.txt (Pillow, VTracer, CairoSVG). CairoSVG also needs the native Cairo library (already present in this cloud environment; install your platform Cairo package if missing). No external API or image generation is used for tracing.
-
-`python queue.py vectorize 1` backfills completed PNGs and writes `work/svg-validation-batch-001.json`. Original PNG bytes, queue status and generation attempts are preserved. Re-running replaces SVGs deterministically. Future `accept` calls produce both files; if tracing fails, completion is not recorded. `bundle` refuses missing or invalid SVGs and includes both formats.
-
-SVGs contain real filled vector paths (smoothed curves, with detailed boundary paths as a fallback when smoothing fails fidelity checks) with exactly #202123 and #C31E25, no embedded raster images. Tracing thresholds alpha at 128, maps visible pixels to the two palette colors and removes tiny speckles. It approximates raster edges and does not reconstruct original design objects or editable stroke centerlines. Transparent gaps are preserved. Each SVG is rendered with CairoSVG and must reach at least 95% intersection-over-union against each source color layer. This checks geometry, not subject accuracy or visual quality; inspect both versions. PNGs remain the original generated images and can have slight color variation.
-
-Run `python -m unittest discover -s tests -v` to verify tracing, transparent holes, fidelity rejection and paired queue delivery.
-
-User-approved alpha cleanup: accept removes only pixels with alpha exactly 1/255, preserves every higher-opacity pixel and archives original PNGs by SHA-256 under work/originals/. All original validation still applies. Revalidate saved rejected images after cleanup without resetting generation attempts.
-
-Combined delivery: `deliverables/FWS-Icons-First-100-PNG-SVG.zip` contains 200 icon files in batch folders. `deliverables/FWS-Icons-First-100-Preview.jpg` is the labeled overview. Progress and generation attempt counts remain authoritative in SQLite.
+Browser checks exercise search, filters, pagination, modal controls, previews, real downloads, custom export dimensions/colors/alpha, copying, reset and mobile fit. Playwright is optional test tooling, not a website runtime dependency.

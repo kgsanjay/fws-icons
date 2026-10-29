@@ -11,8 +11,8 @@ with sync_playwright() as p:
  page.goto('http://127.0.0.1:8080');page.wait_for_selector('.icon-card')
  assert page.locator('.icon-card').count()==min(48,ready)
  assert f'{ready} icons' in page.locator('#results').inner_text()
- page.locator('#search').fill('appointment');assert page.locator('.icon-card').count()>0
- page.locator('.icon-card').first.click();page.wait_for_function("document.getElementById('svg-code').textContent.includes('<svg')")
+ page.locator('#search').fill(next(x['title'] for x in data['master'] if x['status']=='ready'));assert page.locator('.icon-card').count()>0
+ page.locator('.icon-card').first.click();page.wait_for_function("!document.getElementById('customize').disabled")
  assert page.locator('#download-svg').get_attribute('href').startswith('blob:')
  assert page.locator('#original-svg').get_attribute('href').endswith('.svg')
  page.locator('[data-format="png"]').click();page.wait_for_function("document.querySelector('#detail-preview img').src.startsWith('blob:')")
@@ -26,7 +26,9 @@ with sync_playwright() as p:
  page.locator('#status').select_option('pending');page.locator('.icon-card').first.click()
  assert page.locator('#detail-downloads').is_hidden();page.keyboard.press('Escape')
  page.locator('#collection').select_option('available')
- page.locator('#next').click();assert 'Page 2' in page.locator('#page-label').inner_text()
+ if ready>48:
+  page.locator('#next').click();assert 'Page 2' in page.locator('#page-label').inner_text()
+ else:assert page.locator('#next').is_disabled()
  page.get_by_role('button',name='Customer support',exact=True).click();assert page.get_by_role('button',name='Customer support',exact=True).get_attribute('aria-pressed')=='true'
  page.get_by_role('button',name='All icons',exact=True).click()
  page.locator('#background').select_option('checker');assert 'checker' in page.locator('#icon-grid').get_attribute('class')

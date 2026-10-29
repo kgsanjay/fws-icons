@@ -1,5 +1,5 @@
 """Build the static gallery index from saved queue state, never from prompts."""
-import json,sqlite3
+import json,sqlite3,zipfile
 from pathlib import Path
 BASE=Path(__file__).resolve().parents[1]
 def category(title):
@@ -15,7 +15,15 @@ def collection(root,name,ready_only=False):
   items.append({'id':f"{name}-{r['id']}",'number':r['id'],'title':r['title'],'category':category(r['title']),'status':'ready' if ready else 'pending','png':path.relative_to(BASE).as_posix() if ready else None,'svg':path.with_suffix('.svg').relative_to(BASE).as_posix() if ready else None})
  c.close();return items
 def build():
- data={'master':collection(BASE/'catalog','master'),'legacy':collection(BASE,'legacy',True)}
- target=BASE/'web/catalog.json';temporary=target.with_suffix('.json.tmp');temporary.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8');temporary.replace(target);print(f'Gallery: {len(data["master"])} master entries, {sum(x["status"]=="ready" for x in data["master"])} ready, {len(data["legacy"])} previous icons')
+ data={'master':collection(BASE/'catalog','master'),'legacy':[]}
+ ready=[x for x in data['master'] if x['status']=='ready']
+ destination=BASE/'catalog/deliverables/FWS-Native-Icons-All.zip';destination.parent.mkdir(exist_ok=True)
+ temporary=destination.with_suffix('.zip.tmp')
+ with zipfile.ZipFile(temporary,'w',zipfile.ZIP_DEFLATED) as archive:
+  for icon in ready:
+   for format in ['svg','png']:
+    path=BASE/icon[format];archive.write(path,path.relative_to(BASE/'catalog/output').as_posix())
+ temporary.replace(destination)
+ target=BASE/'web/catalog.json';temporary=target.with_suffix('.json.tmp');temporary.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8');temporary.replace(target);print(f'Gallery: {len(data["master"])} master entries, {len(ready)} native pairs ready')
  return data
 if __name__=='__main__':build()

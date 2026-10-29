@@ -28,8 +28,8 @@ with tempfile.TemporaryDirectory() as folder, sync_playwright() as p:
  assert root.get('viewBox')==ET.fromstring(original_text).get('viewBox')
  ns={'s':'http://www.w3.org/2000/svg'}
  assert root.find('s:rect',ns).get('fill')=='#fceedd'
- assert {n.get('fill') for n in root.findall('s:path',ns)}=={'#0066ff','#00aa66'}
- assert len(root.findall('s:path',ns))==len(ET.fromstring(original_text).findall('s:path',ns))
+ assert {e.get(a) for e in root.iter() for a in ['stroke','fill'] if e.get(a) not in (None,'none')}=={'#0066ff','#00aa66','#fceedd'}
+ assert len(root.findall('.//s:path',ns))==len(ET.fromstring(original_text).findall('.//s:path',ns))
  with page.expect_download() as download:page.locator('#download-png').click()
  png=Path(folder)/'custom.png';download.value.save_as(png)
  with Image.open(png) as im:
