@@ -14,7 +14,7 @@ with sync_playwright() as p:
  page.locator('#search').fill(next(x['title'] for x in data['master'] if x['status']=='ready'));assert page.locator('.icon-card').count()>0
  page.locator('.icon-card').first.click();page.wait_for_function("!document.getElementById('customize').disabled")
  assert page.locator('#download-svg').get_attribute('href').startswith('blob:')
- assert page.locator('#original-svg').get_attribute('href').endswith('.svg')
+ assert page.locator('#original-svg').get_attribute('href').split('?')[0].endswith('.svg')
  page.locator('[data-format="png"]').click();page.wait_for_function("document.querySelector('#detail-preview img').src.startsWith('blob:')")
  with page.expect_download() as d:page.locator('#download-svg').click()
  assert d.value.suggested_filename.endswith('.svg')

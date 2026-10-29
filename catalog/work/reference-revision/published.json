@@ -1,0 +1,128 @@
+{
+  "scope": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "basis": "User requested matching archived reference style; approved publishing 20 revised icons for live review",
+  "files": [
+    {
+      "id": 11,
+      "svg_sha256": "f82da81c11d032a48f199b69f3ccb1ffb3520724f15ad5813097fac5fbdd3171",
+      "png_sha256": "fd36dc0affed82d279798b56539914fa3c8829c0ace2d5dfa7f1fcdc1f7f480a"
+    },
+    {
+      "id": 12,
+      "svg_sha256": "ca02b2a79c67d6c777728b573745d42248723777a948d33e2190215832ec548a",
+      "png_sha256": "c71fb425d544a18e4ca10aba697b9d293b0f77c800ec18ba0223444e747e05ef"
+    },
+    {
+      "id": 13,
+      "svg_sha256": "e42ea08462ca4c582de33bed0562cb15ea33822e89dc479ec6af9243d538d81c",
+      "png_sha256": "1e3210144a8c8d25dd69298006a72356b8e01face3f507e92e3f4d34283d4de3"
+    },
+    {
+      "id": 14,
+      "svg_sha256": "00e1fc46ef628d6019a46f5994ebffbf9aaab03c64b5b25d025df6482a2ef034",
+      "png_sha256": "d236dba0999666da912c261612dd6fce46990a70c88fd435ba3e78d4528bb960"
+    },
+    {
+      "id": 15,
+      "svg_sha256": "808dc86e538de7b5db81ddb3f98192ee5df8a06e501e38d4c50ea1676dce769a",
+      "png_sha256": "f2d72d577e5bbb608431898b871c26288f57583b22896d54ab0dc97be8ce1f7e"
+    },
+    {
+      "id": 16,
+      "svg_sha256": "c62b74c9fd969951d0985d69e51f581953517dcf811ec2da2878e2f4131910c3",
+      "png_sha256": "961268c2a4907958f4f352e8909430828d81b3c580512fe5a61f864f74083964"
+    },
+    {
+      "id": 17,
+      "svg_sha256": "ba04230a11f406b233b889f55421ffb6005bb687c478d46b084b7dd0de2faeeb",
+      "png_sha256": "b843f6b3d5ddb79296d42a9904e8599df916f4a31dcbf2799898ac7a02895ba1"
+    },
+    {
+      "id": 18,
+      "svg_sha256": "0e0fe08e28e6e2b3f20182c5f02048a0035e99ad8b440c1bf07d45a37d7fe13d",
+      "png_sha256": "3a87eda46fb46f1dae706dc47bd5bb3bc55328e45f3451ada673c524b564e0c7"
+    },
+    {
+      "id": 19,
+      "svg_sha256": "8254f672d7e06cf05155f8ee8ab9c9f1b872ea28dede8764f94babf170f151d7",
+      "png_sha256": "92ab102d6e833c96004dffe2007ce8a9491f805847dee69118f91242b8ab2c62"
+    },
+    {
+      "id": 20,
+      "svg_sha256": "06a04188ce9db2e672d43d161e94e332d480ba76ecae66492806afe0862bb3ea",
+      "png_sha256": "43127729ba8b18b201f69f999b321b5ca1eade5452de8997d6f7bc19ee3c2c25"
+    },
+    {
+      "id": 21,
+      "svg_sha256": "1acc6771aa84f3e7b536b035db87d39818918cb1397708ce3596d73f895123ae",
+      "png_sha256": "73fc98e6ddcc86b28a4f4b714dc1b84630b3de8e3d5bc2ad534ef2ae1b4b8039"
+    },
+    {
+      "id": 22,
+      "svg_sha256": "99ab30d6f565de9454d1731ff56e2af1d05b4748123fbb21cf32f7317f55c254",
+      "png_sha256": "38aa75b48c4d118cae0a770a199b2ebe02e18f262ffcd5685d4650433645acda"
+    },
+    {
+      "id": 23,
+      "svg_sha256": "972e3c5c3eec2da7ff0ee385b59791b481a826d3a4402ef01bc0cdfcc4da442e",
+      "png_sha256": "a7d399c3f87339b2ca0a120b76546849f8bfcd5cb41b24946d9eda9590427e18"
+    },
+    {
+      "id": 24,
+      "svg_sha256": "5a33dfeae7595b32efc949b76c034725b3bfb4908007152c52265d6842acf85f",
+      "png_sha256": "2bad99452e713ceb4a166e746d8fdb5910bf955b8a467044e5ba2f0871ffff33"
+    },
+    {
+      "id": 25,
+      "svg_sha256": "bfb7970ecbba8530aebc6a4a2e2a411a90c84a9d872c097fe5be265caeb65008",
+      "png_sha256": "58f122ab1953b2c51e464efc7bdd0785ff3a02121b818047edcb77a43e988ea9"
+    },
+    {
+      "id": 26,
+      "svg_sha256": "6f21adae75fb73b2da2b6fe4d8e01d8933954dafd60e728898cc79aab62d2014",
+      "png_sha256": "6589d290c883bcef25bd47a6283e00a19ef23dee5e687dc1c5535da14e6d66fd"
+    },
+    {
+      "id": 27,
+      "svg_sha256": "42a8c39fd2470bca3d817a71c0abba000d13660958b2c82f77cfb5596f2ff7f3",
+      "png_sha256": "54f64ee5be760a3c6ec85b023286a233a33816eefe23968059f59b76bf9c62fd"
+    },
+    {
+      "id": 28,
+      "svg_sha256": "3a34986c0ca07eefe9b01f40ba080128e33cea01c884297e9945b0b0a8739d2b",
+      "png_sha256": "db9938b5d89700f00b4b1081bbb2072877d32a2beaea45f57386d31a6470e0e2"
+    },
+    {
+      "id": 29,
+      "svg_sha256": "0c7716c5db755a177ce2af8a1b5a1731a3a2da7f917dee43e61baf94d513bef7",
+      "png_sha256": "346cfa6f0996d32654d55e41b3685f036bce45e4d89486e443088387b7d8407e"
+    },
+    {
+      "id": 30,
+      "svg_sha256": "344810af9c04b6474082074c33cd5e1e9413c0324c7520df86a234004ddde83e",
+      "png_sha256": "e44baf6c3bab7775778faa27e584d230c043acddb9ee97900297ef99c62aab4e"
+    }
+  ],
+  "final_refinement": "Original-reference controlled crimson fills on functional earpads/microphones; one authoring revision, no additional status/attempt changes"
+}

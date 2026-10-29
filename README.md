@@ -45,7 +45,7 @@ python queue.py bundle BATCH
 
 Commands default to `catalog/`; `--root catalog` can also be supplied before the command. New master icons require native SVG-first authoring. PNG-first acceptance and retracing are blocked. Never regenerate completed artwork or reset attempts to bypass validation.
 
-Use a square `viewBox="0 0 128 128"`, `fill="none"`, consistent 2.5-unit strokes, round caps and joins, and only charcoal **#202123** / crimson **#C31E25**. Use simple geometry with generous margins, aligned elements and clear joins. Avoid touching contours, text, logos, scripts, CSS, transforms, external resources, and raster embedding. Inspect at small and large sizes; numerical stroke consistency alone does not prove optical quality.
+Use a square `viewBox="0 0 128 128"`, `fill="none"`, consistent 3-unit strokes, round caps and joins, and only charcoal **#202123** / crimson **#C31E25**. Use simple geometry with generous margins, aligned elements and clear joins. Avoid touching contours, text, logos, scripts, CSS, transforms, external resources, and raster embedding. Inspect at small and large sizes; numerical stroke consistency alone does not prove optical quality.
 
 Acceptance validates native geometry and strokes, exports a 1024×1024 transparent PNG, checks colors/margins, and verifies the PNG is an exact SVG render. It saves each passing pair immediately, updates progress and rebuilds the gallery and all-icon ZIP. Source authoring and visual review take most of the time; PNG export is automatic and does not use an image-generation service.
 
@@ -65,3 +65,9 @@ python tools/test_custom_exports.py
 ```
 
 Browser checks exercise search, filters, pagination, modal controls, previews, real downloads, custom export dimensions/colors/alpha, copying, reset and mobile fit. Playwright is optional test tooling, not a website runtime dependency.
+
+## Reference-style review revision
+
+The user authorized revising all 20 completed icons to follow the archived original service-illustration reference: fuller compositions, subject-specific detail, stronger 3-unit strokes, charcoal structure and crimson functional accents. Native SVG sources and matching PNGs remain the workflow. This set is awaiting the user’s visual assessment; numerical validation does not certify a style match. The revision source and audit record are in `catalog/work/reference-revision/`; queue status remains 20 complete.
+
+Gallery asset URLs include content-version keys so revised files are requested after deployment. `catalog/deliverables/Reference-Style-20-Preview.png` is the current review sheet.

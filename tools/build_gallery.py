@@ -1,5 +1,5 @@
 """Build the static gallery index from saved queue state, never from prompts."""
-import json,sqlite3,zipfile
+import json,sqlite3,zipfile,hashlib
 from pathlib import Path
 BASE=Path(__file__).resolve().parents[1]
 def category(title):
@@ -12,7 +12,7 @@ def collection(root,name,ready_only=False):
  for r in c.execute('select * from icons order by id'):
   if ready_only and r['status']!='complete':continue
   path=root/'output'/f"batch-{r['batch']:03d}"/r['filename'];ready=r['status']=='complete' and path.is_file() and path.with_suffix('.svg').is_file()
-  items.append({'id':f"{name}-{r['id']}",'number':r['id'],'title':r['title'],'category':category(r['title']),'status':'ready' if ready else 'pending','png':path.relative_to(BASE).as_posix() if ready else None,'svg':path.with_suffix('.svg').relative_to(BASE).as_posix() if ready else None})
+  items.append({'id':f"{name}-{r['id']}",'number':r['id'],'title':r['title'],'category':category(r['title']),'status':'ready' if ready else 'pending','version':hashlib.sha256(path.with_suffix('.svg').read_bytes()).hexdigest()[:12] if ready else None,'png':path.relative_to(BASE).as_posix() if ready else None,'svg':path.with_suffix('.svg').relative_to(BASE).as_posix() if ready else None})
  c.close();return items
 def build():
  data={'master':collection(BASE/'catalog','master'),'legacy':[]}
