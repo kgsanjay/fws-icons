@@ -71,3 +71,5 @@ Browser checks exercise search, filters, pagination, modal controls, previews, r
 The user authorized revising all 20 completed icons to follow the archived original service-illustration reference: fuller compositions, subject-specific detail, stronger 3-unit strokes, charcoal structure and crimson functional accents. Native SVG sources and matching PNGs remain the workflow. This set is awaiting the user’s visual assessment; numerical validation does not certify a style match. The revision source and audit record are in `catalog/work/reference-revision/`; queue status remains 20 complete.
 
 Gallery asset URLs include content-version keys so revised files are requested after deployment. `catalog/deliverables/Reference-Style-20-Preview.png` is the current review sheet.
+
+SVG exports use standard unprefixed `<svg xmlns="http://www.w3.org/2000/svg">` markup for editor file import and clipboard recognition. Original files, custom downloads, and Copy SVG all use this serialization. Namespace normalization preserves editable paths, strokes and rendered artwork. Browser/render regression tests cover this format; direct Figma import still requires a user check.

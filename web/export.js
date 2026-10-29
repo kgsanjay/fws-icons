@@ -7,8 +7,23 @@ window.FWSExport = {
     for(const color of [options.primary,options.accent,...(options.background?[options.background]:[])]) {
       if(!/^#[0-9a-f]{6}$/i.test(color))throw Error('Choose a valid six-digit hex color.');
     }
-    const doc=new DOMParser().parseFromString(source,'image/svg+xml'),root=doc.documentElement;
-    if(doc.querySelector('parsererror')||root.localName!=='svg')throw Error('This SVG could not be read.');
+    const parsed=new DOMParser().parseFromString(source,'image/svg+xml');
+    if(parsed.querySelector('parsererror')||parsed.documentElement.localName!=='svg')throw Error('This SVG could not be read.');
+    // Recreate SVG nodes without XML prefixes for design-tool import/paste.
+    const ns='http://www.w3.org/2000/svg',doc=document.implementation.createDocument(ns,'svg',null),root=doc.documentElement;
+    function copySvg(from,to){
+      if(from.namespaceURI!==ns)throw Error('Unsupported SVG namespace.');
+      for(const attr of from.attributes){
+        if(attr.namespaceURI==='http://www.w3.org/2000/xmlns/')continue;
+        if(attr.namespaceURI)throw Error('Unsupported SVG attribute namespace.');
+        to.setAttribute(attr.localName,attr.value);
+      }
+      for(const child of from.childNodes){
+        if(child.nodeType===Node.ELEMENT_NODE){const element=doc.createElementNS(ns,child.localName);copySvg(child,element);to.appendChild(element);}
+        else if(child.nodeType===Node.TEXT_NODE)to.appendChild(doc.createTextNode(child.data));
+      }
+    }
+    copySvg(parsed.documentElement,root);
     const box=(root.getAttribute('viewBox')||'').trim().split(/[\s,]+/).map(Number);
     if(box.length!==4||box.some(n=>!Number.isFinite(n))||box[2]<=0||box[3]<=0)throw Error('This SVG has no valid canvas.');
     root.setAttribute('width',String(size));root.setAttribute('height',String(size));

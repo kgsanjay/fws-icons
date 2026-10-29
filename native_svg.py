@@ -8,6 +8,7 @@ import cairosvg
 from PIL import Image, ImageChops
 
 NS = 'http://www.w3.org/2000/svg'
+ET.register_namespace('', NS)
 PALETTE = {'#202123', '#c31e25'}
 GEOMETRY = {'path', 'circle', 'ellipse', 'rect', 'line', 'polyline', 'polygon'}
 ATTRS = {'svg': {'viewBox','width','height','version'}, 'g': set(),
@@ -67,7 +68,9 @@ def export_png(source, destination, size=1024):
         raise ValueError('PNG size must be an integer from 16 to 4096')
     root=validate_source(source)
     root.set('width',str(size));root.set('height',str(size))
-    data=ET.tostring(root,encoding='utf-8',xml_declaration=True)
+    # Plain <svg xmlns="..."> is compatible with design-tool file import and paste.
+    ET.register_namespace('', NS)
+    data=ET.tostring(root,encoding='utf-8',xml_declaration=False)
     cairosvg.svg2png(bytestring=data,write_to=str(destination),output_width=size,output_height=size)
     return data
 

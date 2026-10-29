@@ -14,6 +14,10 @@ with tempfile.TemporaryDirectory() as folder, sync_playwright() as p:
  # Native strokes (including inherited paint on the SVG root) must recolor too.
  native='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" stroke="#202123" stroke-width="2.5"><circle cx="50" cy="50" r="20"/><path d="M20 80H100" stroke="#C31E25"/></svg>'
  transformed=page.evaluate("source=>FWSExport.makeSvg(source,{size:256,primary:'#0066ff',accent:'#00aa66',background:null})",native)
+ assert transformed.startswith('<svg ') and 'ns0:' not in transformed
+ prefixed=native.replace('<svg ','<ns0:svg ').replace('</svg>','</ns0:svg>').replace('xmlns=','xmlns:ns0=').replace('<circle ','<ns0:circle ').replace('<path ','<ns0:path ')
+ normalized=page.evaluate("source=>FWSExport.makeSvg(source,{size:256,primary:'#0066ff',accent:'#00aa66',background:null})",prefixed)
+ assert normalized.startswith('<svg ') and 'ns0:' not in normalized
  tree=ET.fromstring(transformed)
  assert tree.get('stroke')=='#0066ff' and tree.find('{http://www.w3.org/2000/svg}path').get('stroke')=='#00aa66'
  assert tree.get('viewBox')=='0 0 128 128' and tree.get('width')=='256'
@@ -24,6 +28,7 @@ with tempfile.TemporaryDirectory() as folder, sync_playwright() as p:
  page.locator('#export-background').select_option('solid')
  with page.expect_download() as download:page.locator('#download-svg').click()
  svg=Path(folder)/'custom.svg';download.value.save_as(svg);root=ET.parse(svg).getroot()
+ assert svg.read_text().startswith('<svg ') and 'ns0:' not in svg.read_text()
  assert root.get('width')=='128' and root.get('height')=='128'
  assert root.get('viewBox')==ET.fromstring(original_text).get('viewBox')
  ns={'s':'http://www.w3.org/2000/svg'}
@@ -35,7 +40,7 @@ with tempfile.TemporaryDirectory() as folder, sync_playwright() as p:
  with Image.open(png) as im:
   assert im.size==(128,128);assert im.convert('RGBA').getpixel((0,0))==(252,238,221,255)
   colors=set(im.convert('RGB').getdata());assert (0,102,255) in colors and (0,170,102) in colors
- page.locator('#copy-code').click();assert 'width="128"' in page.evaluate('navigator.clipboard.readText()')
+ page.locator('#copy-code').click();copied=page.evaluate('navigator.clipboard.readText()');assert 'width="128"' in copied and copied.startswith('<svg ') and 'ns0:' not in copied
  page.locator('#export-background').select_option('transparent')
  with page.expect_download() as download:page.locator('#download-png').click()
  download.value.save_as(png)

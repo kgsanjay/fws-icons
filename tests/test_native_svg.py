@@ -1,5 +1,6 @@
 import importlib.util
 import tempfile
+import xml.etree.ElementTree as ET
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -15,7 +16,10 @@ class NativeSvgTests(unittest.TestCase):
   self.svg=self.root/'source.svg';self.svg.write_text(SOURCE)
  def test_native_pair_and_unchanged_source(self):
   png=self.root/'rendered.png';original=self.svg.read_bytes()
-  normalized=export_png(self.svg,png,256);svg=self.root/'normalized.svg';svg.write_bytes(normalized)
+  ET.register_namespace('other_tool','http://www.w3.org/2000/svg')
+  normalized=export_png(self.svg,png,256)
+  self.assertTrue(normalized.startswith(b'<svg '));self.assertNotIn(b'ns0:',normalized)
+  svg=self.root/'normalized.svg';svg.write_bytes(normalized)
   validate_pair(svg,png);self.assertEqual(original,self.svg.read_bytes())
   with Image.open(png) as im:self.assertEqual(im.size,(256,256));self.assertEqual(im.getpixel((0,0))[3],0)
   with Image.open(png) as im:
