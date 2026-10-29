@@ -12,7 +12,6 @@ Genuine transparent alpha background, including enclosed negative spaces. No whi
 Use highest available native resolution; do not upscale. Match reference.png when available for style only. Never render the filename or title as text. Output a separate PNG.
 '''
 SVG_STYLE='Author one native SVG icon for: {title}.\nSVG FIRST: construct editable geometry directly; do not trace a PNG, embed a raster, or use the image-generation tool for the vector source. Use square viewBox="0 0 128 128", fill="none", a consistent 3-unit stroke-width with round caps/joins, and only #202123 and #C31E25. Use simple paths, circles, rectangles and symmetric curves. No CSS, transforms, external links, scripts, text, numbers, logos, white fills, gradients or shadows. Use filled dots only for small functional details. Keep generous transparent margins and clear spacing; prevent overlapping contours and crowded joins. Inspect at 48, 64 and 256 pixels; mathematical stroke consistency alone does not prove optical quality. Save source SVG, then use accept-svg ID SOURCE.svg --size 1024 to export and verify the matching transparent PNG. Do not regenerate completed artwork.\n'
-def svg_first():return ROOT.resolve()==Path(__file__).resolve().parent/'catalog'
 def db():
  c=sqlite3.connect(ROOT/'progress.sqlite');c.row_factory=sqlite3.Row
  c.execute('CREATE TABLE IF NOT EXISTS icons(id INTEGER PRIMARY KEY,title TEXT,filename TEXT UNIQUE,batch INTEGER,status TEXT DEFAULT "pending",attempts INTEGER DEFAULT 0,error TEXT DEFAULT "")')
@@ -56,7 +55,7 @@ def packet(batch):
  jobs=[]
  for r in rows:
   if r['status']=='complete' or r['attempts']>=3:continue
-  prompt=(SVG_STYLE if svg_first() else STYLE).format(title=r['title']);pf=d/f"{r['id']:04d}.txt";pf.write_text(prompt,encoding='utf-8')
+  prompt=STYLE.format(title=r['title']);pf=d/f"{r['id']:04d}.txt";pf.write_text(prompt,encoding='utf-8')
   output=ROOT/'output'/f'batch-{batch:03d}'/r['filename']
   jobs.append(dict(id=r['id'],title=r['title'],prompt_file=str(pf),output=str(output),svg_output=str(output.with_suffix('.svg'))))
  return jobs
@@ -64,8 +63,6 @@ def accept(id,source):
  c=db();r=c.execute('SELECT * FROM icons WHERE id=?',(id,)).fetchone()
  if not r:raise ValueError('Unknown icon ID')
  if r['status']=='complete':return
- if ROOT.resolve()==Path(__file__).resolve().parent/'catalog':
-  raise ValueError('New master icons use SVG first: accept-svg ID SOURCE.svg')
  from vectorize import convert
  out=ROOT/'output'/f"batch-{r['batch']:03d}"/r['filename'];out.parent.mkdir(parents=True,exist_ok=True)
  with tempfile.TemporaryDirectory(prefix='fws-accept-') as folder:
@@ -96,8 +93,6 @@ def clean_alpha(source,destination):
    image.save(destination)
  return count
 def vectorize_batch(batch):
- if ROOT.resolve()==Path(__file__).resolve().parent/'catalog':
-  raise ValueError('Do not retrace the master catalog; author SVG sources and use accept-svg')
  from vectorize import convert
  rows=[r for r in export() if r['batch']==batch]
  if not rows:raise ValueError('Unknown batch')
@@ -105,9 +100,14 @@ def vectorize_batch(batch):
  for r in rows:
   if r['status']!='complete':continue
   source=ROOT/'output'/f'batch-{batch:03d}'/r['filename'];validate(source)
+  # This backfill command only creates missing SVGs; completed artwork is preserved.
+  if source.with_suffix('.svg').exists():continue
   reports.append(convert(source,source.with_suffix('.svg')))
  report=ROOT/'work'/f'svg-validation-batch-{batch:03d}.json';report.parent.mkdir(exist_ok=True)
  report.write_text(json.dumps(reports,indent=2)+'\n',encoding='utf-8')
+ if ROOT.resolve()==BASE/'catalog':
+  from tools.build_gallery import build
+  build()
  print(report)
 def bundle(batch):
  from PIL import Image,ImageDraw

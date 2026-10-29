@@ -9,7 +9,7 @@ while True:
  rows=q.export();pending=[r for r in rows if r['status']!='complete' and r['attempts']<3]
  if not pending:print('No eligible pending icons. Check status for failed items.');break
  b=min(r['batch'] for r in pending);before=[(r['id'],r['status'],r['attempts']) for r in rows]
- prompt=f'Read AGENTS.md and README.md. Process only batch {b} using queue.py --root {q.ROOT} with native SVG-first authoring and accept-svg for matching PNG export. Do not use raster generation or tracing for new master icons. Save progress after every icon and bundle if complete. If capability/quota/auth blocks you, stop and explain. Do not use paid API fallback.'
+ prompt=f'Read AGENTS.md and README.md. Process only batch {b} using queue.py --root {q.ROOT} with PNG-first image generation matching the original collection. Inspect each generated PNG visually, then accept ID SOURCE.png to preserve the PNG and create traced SVG outlines. Record attempts, save progress after every icon and bundle if complete. If capability/quota/auth blocks you, stop and explain. Do not use paid API fallback.'
  try:r=subprocess.run(['codex','exec','--skip-git-repo-check','--sandbox','workspace-write',prompt],cwd=q.ROOT)
  except KeyboardInterrupt:sys.exit('Stopped; saved queue is ready to resume.')
  after=[(r['id'],r['status'],r['attempts']) for r in q.export()]

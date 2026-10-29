@@ -12,18 +12,22 @@ def collection(root,name,ready_only=False):
  for r in c.execute('select * from icons order by id'):
   if ready_only and r['status']!='complete':continue
   path=root/'output'/f"batch-{r['batch']:03d}"/r['filename'];ready=r['status']=='complete' and path.is_file() and path.with_suffix('.svg').is_file()
-  items.append({'id':f"{name}-{r['id']}",'number':r['id'],'title':r['title'],'category':category(r['title']),'status':'ready' if ready else 'pending','version':hashlib.sha256(path.with_suffix('.svg').read_bytes()).hexdigest()[:12] if ready else None,'png':path.relative_to(BASE).as_posix() if ready else None,'svg':path.with_suffix('.svg').relative_to(BASE).as_posix() if ready else None})
+  items.append({'id':f"{name}-{r['id']}",'number':r['id'],'title':r['title'],'category':category(r['title']),'status':'ready' if ready else 'pending','version':hashlib.sha256(path.read_bytes()+path.with_suffix('.svg').read_bytes()).hexdigest()[:12] if ready else None,'png':path.relative_to(BASE).as_posix() if ready else None,'svg':path.with_suffix('.svg').relative_to(BASE).as_posix() if ready else None})
  c.close();return items
 def build():
- data={'master':collection(BASE/'catalog','master'),'legacy':[]}
- ready=[x for x in data['master'] if x['status']=='ready']
- destination=BASE/'catalog/deliverables/FWS-Native-Icons-All.zip';destination.parent.mkdir(exist_ok=True)
+ legacy=BASE/'legacy'
+ data={'master':collection(BASE/'catalog','master'),'legacy':collection(legacy,'legacy',ready_only=True) if (legacy/'progress.sqlite').is_file() else []}
+ ready=[];seen=set()
+ for icon in data['master']+data['legacy']:
+  key=icon['title'].lower().strip()
+  if icon['status']=='ready' and key not in seen:ready.append(icon);seen.add(key)
+ destination=BASE/'catalog/deliverables/FWS-Icons-All.zip';destination.parent.mkdir(exist_ok=True)
  temporary=destination.with_suffix('.zip.tmp')
  with zipfile.ZipFile(temporary,'w',zipfile.ZIP_DEFLATED) as archive:
   for icon in ready:
    for format in ['svg','png']:
-    path=BASE/icon[format];archive.write(path,path.relative_to(BASE/'catalog/output').as_posix())
+    path=BASE/icon[format];archive.write(path,icon['id'].split('-')[0]+'/'+path.parent.name+'/'+path.name)
  temporary.replace(destination)
- target=BASE/'web/catalog.json';temporary=target.with_suffix('.json.tmp');temporary.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8');temporary.replace(target);print(f'Gallery: {len(data["master"])} master entries, {len(ready)} native pairs ready')
+ target=BASE/'web/catalog.json';temporary=target.with_suffix('.json.tmp');temporary.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8');temporary.replace(target);print(f'Gallery: {len(data["master"])} master entries, {len(ready)} unique PNG/SVG pairs ready')
  return data
 if __name__=='__main__':build()

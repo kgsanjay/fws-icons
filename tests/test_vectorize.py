@@ -70,6 +70,26 @@ class VectorDeliveryTests(unittest.TestCase):
             with self.assertRaises(FileNotFoundError):
                 queue.bundle(1)
 
+    def test_master_png_first_preserves_original_and_completed_pairs(self):
+        master = self.root/'catalog'
+        master.mkdir()
+        with patch.object(queue, 'ROOT', master), patch.object(queue, 'BASE', self.root), patch.object(queue, '__file__', str(self.root/'queue.py')), patch('tools.build_gallery.build') as build:
+            (master/'services.txt').write_text('Example Service\n')
+            queue.init()
+            jobs = queue.packet(1)
+            self.assertIn('Output a separate PNG', Path(jobs[0]['prompt_file']).read_text())
+            queue.accept(1, self.png)
+            output = master/'output/batch-001/Example-Service.png'
+            self.assertEqual(output.read_bytes(), self.png.read_bytes())
+            self.assertEqual(queue.export()[0]['status'], 'complete')
+            original_svg = output.with_suffix('.svg').read_bytes()
+            queue.accept(1, self.root/'missing.png')
+            with patch('vectorize.convert', side_effect=AssertionError('Existing SVG must not be retraced')):
+                queue.vectorize_batch(1)
+            self.assertEqual(output.with_suffix('.svg').read_bytes(), original_svg)
+            self.assertEqual(output.read_bytes(), self.png.read_bytes())
+            self.assertTrue(build.called)
+
 
 if __name__ == '__main__':
     unittest.main()
