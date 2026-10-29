@@ -2,6 +2,14 @@
 
 The gallery is a responsive, static website using our custom PNG/SVG artwork. It includes search, suggested categories, pagination, light/dark/transparency previews, an icon detail dialog, SVG source copy, and individual PNG/SVG downloads. Categories are inferred from titles; pending subjects show no fabricated artwork.
 
+## Search icons on GitHub Pages
+
+Gallery URL after enabling GitHub Pages: **https://kgsanjay.github.io/fws-icons/**
+
+One-time repository setting: open **Settings → Pages → Build and deployment**, choose **Deploy from a branch**, select **main** and **/ (root)**, then **Save**. GitHub will build and publish the site; use the URL after Pages reports deployment success. This setting has not been enabled or verified by the agent because GitHub API access is blocked in the cloud environment.
+
+The root `.nojekyll` file tells GitHub Pages to serve the existing static gallery directly. Search, filters, previews, and PNG/SVG downloads use repository-relative paths and work under `/fws-icons/`. No paid hosting is needed. Future pushes to `main` republish the site automatically once this setting is active. Generation still requires an active Codex session; the website only browses saved artwork.
+
 ## Run the gallery
 
 ```bash
