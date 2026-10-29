@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 128 128" fill="none">
+  <ns0:title>Transition</ns0:title>
+  <ns0:desc>Two process stages connected by a smooth transition arrow.</ns0:desc>
+  <ns0:g stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <ns0:g stroke="#202123">
+      <ns0:rect x="24" y="30" width="30" height="44" rx="4" />
+      <ns0:path d="M32 42 H46 M32 50 H46 M32 58 H41" />
+      <ns0:rect x="74" y="54" width="30" height="44" rx="4" />
+      <ns0:path d="M82 66 H96 M82 74 H96 M82 82 H91" />
+    </ns0:g>
+    <ns0:g stroke="#C31E25">
+      <ns0:path d="M42 88 H50 C60 88 64 82 64 72 V58 C64 46 72 40 83 40 H98" />
+      <ns0:path d="M91 33 L98 40 L91 47" />
+    </ns0:g>
+  </ns0:g>
+</ns0:svg>

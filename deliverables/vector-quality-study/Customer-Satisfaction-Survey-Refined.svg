@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 128 128" fill="none">
+  <title>Customer Satisfaction Survey Services — refined stroke study</title>
+  <desc>Uniform 2.5-unit rounded strokes with separated contours and symmetrical construction.</desc>
+  <g stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#202123">
+      <path d="M50 32 H59 M91 32 H97 A7 7 0 0 1 104 39 V101 A7 7 0 0 1 97 108 H72"/>
+      <path d="M61 29 H67 A8 8 0 0 1 83 29 H89 A2 2 0 0 1 91 31 V36 A2 2 0 0 1 89 38 H61 A2 2 0 0 1 59 36 V31 A2 2 0 0 1 61 29 Z"/>
+      <circle cx="75" cy="28" r="2.5"/>
+      <path d="M72 49 H65 A1 1 0 0 0 64 50 V60 A1 1 0 0 0 65 61 H75 A1 1 0 0 0 76 60 V57"/>
+      <rect x="65" y="68" width="11" height="11" rx="1.5"/>
+      <rect x="65" y="87" width="11" height="11" rx="1.5"/>
+      <path d="M82 55 H95 M82 74 H95 M82 93 H95"/>
+      <circle cx="45" cy="78" r="10"/>
+      <path d="M27 108 V107 C27 99 35 94 45 94 C55 94 63 99 63 107 V108 Z"/>
+    </g>
+    <g stroke="#C31E25">
+      <path d="M46.26 57.28 A16 16 0 1 0 39.47 62.04 L49 65 Z"/>
+      <path d="M28 50 C30 56 38 56 40 50"/>
+      <path d="M67 54 L70 57 L79 48"/>
+    </g>
+  </g>
+  <g fill="#C31E25">
+    <circle cx="29" cy="43" r="1.5"/>
+    <circle cx="39" cy="43" r="1.5"/>
+  </g>
+</svg>

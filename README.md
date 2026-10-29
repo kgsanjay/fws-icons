@@ -21,11 +21,33 @@ python -m http.server 8080 --bind 0.0.0.0
 
 Open the served site in your browser. Serving the repository root is required for image and download paths. Opening index.html directly from disk cannot fetch the JSON index. No frontend build, account, API key, or external CDN is needed. The site has been tested locally; no public deployment or GitHub Pages publication is configured by this change.
 
+## Customize an icon before downloading
+
+Open a ready icon to choose a square export size from 16–4096 px, use common-size presets, change primary/accent colors, or select a transparent/solid-color background. The live preview, copied SVG source, and SVG/PNG downloads reflect these settings. SVG retains its original viewBox and vector paths; PNG is rendered directly from that vector at the selected pixel dimensions. The original source files and queue artwork are never changed; separate Original SVG/PNG links remain available. Reset restores 512 px, charcoal/crimson, and transparency; settings reset for each icon. These controls work in the browser on GitHub Pages without a server or paid API.
+
+Browser export checks (with the gallery server running): `python tools/test_custom_exports.py`. They inspect actual downloaded file dimensions, colors, alpha and SVG paths, plus validation limits, copying, presets, reset, and mobile fit.
+
+## Current production workflow: SVG first → PNG export
+
+New master-list icons are authored as native SVG geometry. PNGs are exported directly from that SVG, not generated separately and traced. The older PNG-first instructions below describe the historical collection only.
+
+```bash
+python queue.py --root catalog packet BATCH
+python queue.py --root catalog attempt ID
+# Author and visually inspect catalog/work/.../subject.svg
+python queue.py --root catalog accept-svg ID catalog/work/.../subject.svg --size 1024
+python queue.py --root catalog bundle BATCH
+```
+
+Use the 128-unit square design grid, consistent 2.5-unit round strokes, charcoal/crimson, transparent space, aligned elements and clear joins. Native validation permits simple geometry only and verifies one stroke width, round caps/joins, and palette colors. PNG validation checks transparency, margins and color presence. Pair validation rerenders SVG and verifies exact raster equality. Completion is recorded only after both formats pass. No image-generation or tracing call is used for new master icons; authored sources still require visual review at small and large sizes.
+
+The gallery customizer handles stroke and fill colors. Existing completed traced pairs, queue attempts, and original files remain untouched. Bundling supports mixed historical and native pairs; do not run vectorize on the master catalog. PNG-first accept is blocked for pending master entries. Default PNG production output is 1024×1024; the website supports other export sizes.
+
 ## New authoritative list: 4,176 subjects
 
 `catalog/original-icon-names.txt` preserves the uploaded list; `catalog/services.txt` stores the same titles without bracket wrappers, in their original order. `catalog/progress.sqlite` is authoritative for this list. The previous 2,538-entry queue, 100 completed pairs, files and progress remain untouched at the repository root.
 
-The importer reused exactly four completed title matches and recorded their legacy IDs in `catalog/migration.json`. Never assume that the old first 100 all belong to the new list. The gallery's Available icons view combines unique ready titles across both collections; Full master list shows all 4,176 subjects and their availability. Currently 14 master subjects are ready (four reused, ten newly created), leaving 4,162 pending; the combined gallery contains 110 unique available pairs.
+The initial importer reused exactly four completed title matches and recorded their legacy IDs in `catalog/migration.json`. Never assume that the old first 100 all belong to the new list. The gallery's Available icons view combines unique ready titles across both collections; Full master list shows all 4,176 subjects and their availability. Currently 15 master subjects are ready (four reused, ten raster-generated/traced, and one native SVG-first), leaving 4,161 pending; the combined gallery contains 111 unique available pairs.
 
 Use the explicit queue folder for every new-list command:
 
@@ -34,12 +56,12 @@ python queue.py --root catalog status
 python queue.py --root catalog next
 python queue.py --root catalog packet 2
 python queue.py --root catalog attempt ID
-python queue.py --root catalog accept ID /absolute/path/to/generated.png
+python queue.py --root catalog accept-svg ID /absolute/path/to/authored.svg --size 1024
 python queue.py --root catalog fail ID "reason"
 python queue.py --root catalog bundle BATCH
 ```
 
-Accepted master icons refresh `web/catalog.json` automatically. Run `python tools/build_gallery.py` after manual data changes. New-list output, original images, prompt packets and deliverables live under `catalog/`; old files remain in their existing locations. The first new-list batch is `catalog/deliverables/FWS-Icons-Batch-001.zip` with ten PNG/SVG pairs. PNG alpha cleanup and SVG checks apply to both queues. Never reset attempts or regenerate completed artwork.
+Accepted master icons refresh `web/catalog.json` automatically. Run `python tools/build_gallery.py` after manual data changes. New-list output, original images, prompt packets and deliverables live under `catalog/`; old files remain in their existing locations. The first new-list batch is `catalog/deliverables/FWS-Icons-Batch-001.zip` with ten PNG/SVG pairs. Legacy PNG alpha cleanup applies to the old workflow; new native SVGs produce PNG directly without cleanup. Never reset attempts or regenerate completed artwork.
 
 `python tools/import_catalog.py INPUT.txt` initializes an empty catalog only and refuses to overwrite existing progress. Do not rerun it to resume. The optional Codex supervisor accepts `--root catalog` and still requires separately available CLI authentication and image-generation capability; it is not a background service and has not been verified here.
 
@@ -56,7 +78,7 @@ The browser checks exercise actual search, availability filters, empty results, 
 
 ---
 
-# FWS Icon Factory — Codex project
+# Historical PNG-first workflow (legacy collection)
 
 Contains the user's 2,538 original subjects, organized into 254 delivery batches (last batch has 8). Batches 001–010 contain the first 100 completed icons in PNG and SVG formats; the remaining 2,438 subjects are pending. This is a local Codex queue and supervisor, not a configured paid API worker. Built-in image-generation availability depends on your Codex environment; a ChatGPT login alone does not guarantee it exists there.
 

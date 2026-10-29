@@ -10,6 +10,8 @@ Use ONLY charcoal #202123 for dominant structure and crimson #C31E25 for purpose
 Genuine transparent alpha background, including enclosed negative spaces. No white fills, painted checkerboard, text, letters, numbers, logos, watermarks, gradients, shadows, textures, lighting, 3D, enclosing background cards or decoration. A single question mark may be used for FAQ subjects.
 Use highest available native resolution; do not upscale. Match reference.png when available for style only. Never render the filename or title as text. Output a separate PNG.
 '''
+SVG_STYLE='Author one native SVG icon for: {title}.\nSVG FIRST: construct editable geometry directly; do not trace a PNG, embed a raster, or use the image-generation tool for the vector source. Use square viewBox="0 0 128 128", fill="none", a consistent 2.5-unit stroke-width with round caps/joins, and only #202123 and #C31E25. Use simple paths, circles, rectangles and symmetric curves. No CSS, transforms, external links, scripts, text, numbers, logos, white fills, gradients or shadows. Use filled dots only for small functional details. Keep generous transparent margins and clear spacing; prevent overlapping contours and crowded joins. Inspect at 48, 64 and 256 pixels; mathematical stroke consistency alone does not prove optical quality. Save source SVG, then use accept-svg ID SOURCE.svg --size 1024 to export and verify the matching transparent PNG. Do not regenerate completed artwork.\n'
+def svg_first():return ROOT.resolve()==Path(__file__).resolve().parent/'catalog'
 def db():
  c=sqlite3.connect(ROOT/'progress.sqlite');c.row_factory=sqlite3.Row
  c.execute('CREATE TABLE IF NOT EXISTS icons(id INTEGER PRIMARY KEY,title TEXT,filename TEXT UNIQUE,batch INTEGER,status TEXT DEFAULT "pending",attempts INTEGER DEFAULT 0,error TEXT DEFAULT "")')
@@ -53,7 +55,7 @@ def packet(batch):
  jobs=[]
  for r in rows:
   if r['status']=='complete' or r['attempts']>=3:continue
-  prompt=STYLE.format(title=r['title']);pf=d/f"{r['id']:04d}.txt";pf.write_text(prompt,encoding='utf-8')
+  prompt=(SVG_STYLE if svg_first() else STYLE).format(title=r['title']);pf=d/f"{r['id']:04d}.txt";pf.write_text(prompt,encoding='utf-8')
   output=ROOT/'output'/f'batch-{batch:03d}'/r['filename']
   jobs.append(dict(id=r['id'],title=r['title'],prompt_file=str(pf),output=str(output),svg_output=str(output.with_suffix('.svg'))))
  return jobs
@@ -61,6 +63,8 @@ def accept(id,source):
  c=db();r=c.execute('SELECT * FROM icons WHERE id=?',(id,)).fetchone()
  if not r:raise ValueError('Unknown icon ID')
  if r['status']=='complete':return
+ if ROOT.resolve()==Path(__file__).resolve().parent/'catalog':
+  raise ValueError('New master icons use SVG first: accept-svg ID SOURCE.svg')
  from vectorize import convert
  out=ROOT/'output'/f"batch-{r['batch']:03d}"/r['filename'];out.parent.mkdir(parents=True,exist_ok=True)
  with tempfile.TemporaryDirectory(prefix='fws-accept-') as folder:
@@ -91,6 +95,8 @@ def clean_alpha(source,destination):
    image.save(destination)
  return count
 def vectorize_batch(batch):
+ if ROOT.resolve()==Path(__file__).resolve().parent/'catalog':
+  raise ValueError('Do not retrace the master catalog; author SVG sources and use accept-svg')
  from vectorize import convert
  rows=[r for r in export() if r['batch']==batch]
  if not rows:raise ValueError('Unknown batch')
@@ -105,6 +111,8 @@ def vectorize_batch(batch):
 def bundle(batch):
  from PIL import Image,ImageDraw
  from vectorize import validate_svg
+ from native_svg import validate_pair
+ import xml.etree.ElementTree as ET
  rows=[r for r in export() if r['batch']==batch];dest=ROOT/'deliverables';dest.mkdir(exist_ok=True)
  if not rows or any(r['status']!='complete' for r in rows):raise ValueError('Batch incomplete; do not export partial ZIP')
  zp=dest/f'FWS-Icons-Batch-{batch:03d}.zip';tmp=zp.with_suffix('.tmp')
@@ -112,7 +120,9 @@ def bundle(batch):
  with zipfile.ZipFile(tmp,'w',zipfile.ZIP_DEFLATED) as z:
   for n,r in enumerate(rows):
    p=ROOT/'output'/f'batch-{batch:03d}'/r['filename'];validate(p)
-   svg=p.with_suffix('.svg');validate_svg(svg,p)
+   svg=p.with_suffix('.svg')
+   if any(e.get('stroke','none')!='none' for e in ET.parse(svg).getroot().iter()):validate_pair(svg,p)
+   else:validate_svg(svg,p)
    z.write(p,p.name);z.write(svg,svg.name)
    with Image.open(p) as im:
     im=im.convert('RGBA');im.thumbnail((210,210));x=n%5*240+(240-im.width)//2;y=n//5*290
@@ -122,6 +132,20 @@ def bundle(batch):
  with zipfile.ZipFile(tmp) as z:
   if z.testzip():raise ValueError('Corrupt archive')
  tmp.replace(zp);sheet.save(dest/f'FWS-Icons-Batch-{batch:03d}-Preview.jpg');print(zp)
+def accept_svg(id,source,size=1024):
+ from native_svg import export_png,validate_pair
+ c=db();r=c.execute('SELECT * FROM icons WHERE id=?',(id,)).fetchone()
+ if not r:raise ValueError('Unknown icon ID')
+ if r['status']=='complete':return
+ out=ROOT/'output'/f"batch-{r['batch']:03d}"/r['filename'];out.parent.mkdir(parents=True,exist_ok=True)
+ with tempfile.TemporaryDirectory(prefix='fws-native-') as folder:
+  png=Path(folder)/out.name;svg=png.with_suffix('.svg')
+  svg.write_bytes(export_png(source,png,size));validate(png);validate_pair(svg,png)
+  shutil.copy2(svg,out.with_suffix('.svg'));shutil.copy2(png,out)
+ c.execute('UPDATE icons SET status="complete",error="" WHERE id=?',(id,));c.commit();c.close();export()
+ if ROOT.resolve()==Path(__file__).resolve().parent/'catalog':
+  from tools.build_gallery import build
+  build()
 def main():
  global ROOT
  p=argparse.ArgumentParser();p.add_argument('--root',type=Path,default=ROOT,help='Queue folder; use catalog for the 4,176-entry master list');s=p.add_subparsers(dest='cmd',required=True)
@@ -129,6 +153,7 @@ def main():
  for name in ['packet','bundle','vectorize']:
   q=s.add_parser(name);q.add_argument('batch',type=int)
  q=s.add_parser('accept');q.add_argument('id',type=int);q.add_argument('source',type=Path)
+ q=s.add_parser('accept-svg');q.add_argument('id',type=int);q.add_argument('source',type=Path);q.add_argument('--size',type=int,default=1024)
  q=s.add_parser('attempt');q.add_argument('id',type=int)
  q=s.add_parser('fail');q.add_argument('id',type=int);q.add_argument('reason')
  a=p.parse_args();ROOT=a.root.resolve();init()
@@ -137,6 +162,7 @@ def main():
   rows=[r for r in export() if r['status']!='complete' and r['attempts']<3];print(min((r['batch'] for r in rows),default=0))
  elif a.cmd=='packet':print(json.dumps(packet(a.batch),indent=2))
  elif a.cmd=='accept':accept(a.id,a.source)
+ elif a.cmd=='accept-svg':accept_svg(a.id,a.source,a.size)
  elif a.cmd=='bundle':bundle(a.batch)
  elif a.cmd=='vectorize':vectorize_batch(a.batch)
  elif a.cmd in ['attempt','fail']:
