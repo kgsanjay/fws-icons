@@ -6,7 +6,7 @@ A searchable custom icon gallery with original transparent PNG artwork and trace
 
 ## Current collection
 
-The user preferred the original PNG-generated artwork and requested its restoration. The gallery has **174 distinct PNG/SVG pairs**: 100 original icons under `legacy/` and 78 ready master entries, with four shared subjects counted once. The authoritative master list contains **4,176 subjects: 78 complete and 4,098 remaining**. The current production run has added 64 new outline PNG/SVG pairs (IDs 11–74).
+The user preferred the original PNG-generated artwork and requested its restoration. The gallery has **210 distinct PNG/SVG pairs**: 100 original icons under `legacy/` and 114 ready master entries, with four shared subjects counted once. The authoritative master list contains **4,176 subjects: 114 complete and 4,062 remaining**. The current production run has completed its first **100 new outline PNG/SVG pairs (IDs 11–110)** and will continue the following 100 pending subjects.
 
 The 20 native SVG revisions (IDs 11–30) were removed from the gallery and have now been replaced with PNG-first artwork. Their files were backed up outside the repository before removal. Attempt counts were preserved. `catalog/work/png-restoration.json` records the recovery; native revision source/audit files are historical.
 
@@ -23,9 +23,9 @@ python -m http.server 8080 --bind 0.0.0.0
 
 Serve the repository root so asset/download paths resolve. Search, categories, availability filters, pagination, previews, downloads and custom exports work without a frontend build, CDN or API key. Pending entries have no downloadable artwork. GitHub Pages uses **main → / (root)** with `.nojekyll`; pushes republish after the Pages deployment finishes.
 
-Grid and hero previews use the original PNG artwork. **Original artwork → PNG** preserves that artwork. Size/color/background customization produces SVG exports and PNGs rendered from the traced vector; these can differ slightly from the original PNG. Export dimensions support **16–4096 px per side**, with square locking or independent width/height. Rectangular exports center the artwork without stretching it. Extra padding, single-color mode and light/dark/transparency preview canvases are available. Canvas color does not change the export background. Source files remain unchanged. The preview and settings have separate panels, download actions stay visible, and SVG source is collapsed by default. Filled icons require separately authored artwork; single-color mode preserves the outline design. The next 100 icons remain in the original outline style, per the user’s selection.
+Grid and hero previews use the original PNG artwork. **Original artwork → PNG** preserves that artwork. Size/color/background customization produces SVG exports and PNGs rendered from the traced vector; these can differ slightly from the original PNG. Export dimensions support **16–4096 px per side**, with square locking or independent width/height. Rectangular exports center the artwork without stretching it. Extra padding, single-color mode and light/dark/transparency preview canvases are available. Canvas color does not change the export background. Source files remain unchanged. The preview and settings have separate panels, download actions stay visible, and SVG source is collapsed by default. Filled icons require separately authored artwork; single-color mode preserves the outline design. All new production uses the original outline style, per the user’s selection.
 
-The **Download all icons** button downloads `catalog/deliverables/FWS-Icons-All.zip`, rebuilt from distinct ready master and legacy pairs. Complete master batches have separate ZIPs and previews under `catalog/deliverables/`.
+The **Download all icons** button downloads `catalog/deliverables/FWS-Icons-All.zip`, rebuilt from distinct ready master and legacy pairs. Complete master batches have separate ZIPs and previews under `catalog/deliverables/`. The first 100 new pairs are also bundled in `catalog/deliverables/FWS-Icons-New-100-001.zip`; their checksums are in `catalog/work/outline-100-001-manifest.json`.
 
 ## PNG-first production
 

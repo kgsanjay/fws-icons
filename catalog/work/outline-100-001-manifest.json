@@ -1,0 +1,1402 @@
+[
+  {
+    "id": 11,
+    "title": "2. Transition",
+    "png": "catalog/output/batch-002/2-Transition.png",
+    "svg": "catalog/output/batch-002/2-Transition.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "92f06a00ff28ee0f06b0032770d5325d96bb45ff882b8b73404db657b1423ed0",
+      "svg": "1f9b426eda08fc6aa0c7bf71a87034ad625c25f469ef808ecf5fe6c9802b054b"
+    }
+  },
+  {
+    "id": 12,
+    "title": "24-Hour Answering Services",
+    "png": "catalog/output/batch-002/24-Hour-Answering-Services.png",
+    "svg": "catalog/output/batch-002/24-Hour-Answering-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "1b8e1fdf2e3f0c917c60a4de584dfc9cbcbf62c621ceea7a54d23f9d869a38f2",
+      "svg": "2f0fc1d0498a6f29f6dc146045f8c1134b6b6c62597ca62f0e38ac46eb4fa561"
+    }
+  },
+  {
+    "id": 13,
+    "title": "24-hour TATs",
+    "png": "catalog/output/batch-002/24-hour-TATs.png",
+    "svg": "catalog/output/batch-002/24-hour-TATs.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "49b074080f9bff7ee7f7101898c3e8cd87c375d43f74ff961eb261d9dc78d8a9",
+      "svg": "fb3772575a39d61f8c5e9202e67a0af3095085c6d1d4d5dc2a883676707916db"
+    }
+  },
+  {
+    "id": 14,
+    "title": "24/7 Access to Support",
+    "png": "catalog/output/batch-002/24-7-Access-to-Support.png",
+    "svg": "catalog/output/batch-002/24-7-Access-to-Support.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "73f6bd0d11a0d5c032ac637fa4fc9a58772c45511e047f3c726e0b8c78623b41",
+      "svg": "87e678bb72b21f3290d34419db17e6ccbc1ae445d140b79c67efbed0bde41352"
+    }
+  },
+  {
+    "id": 15,
+    "title": "24/7 Assistance",
+    "png": "catalog/output/batch-002/24-7-Assistance.png",
+    "svg": "catalog/output/batch-002/24-7-Assistance.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "124c89e9717ef70d77b9abc44149d831db0aa05d55a3d46b2c623cc343d0b350",
+      "svg": "9c3494429d1a16e1db18f098a553c0f4fafd41b24179fd0e15d90f087ccf6016"
+    }
+  },
+  {
+    "id": 16,
+    "title": "24/7 Availability",
+    "png": "catalog/output/batch-002/24-7-Availability.png",
+    "svg": "catalog/output/batch-002/24-7-Availability.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "e340842c5b02e085969b3c028d29b3c825f5c52c336122bb58467008538a06ab",
+      "svg": "1d49747fe6e9e37cb081e88ee342db5bdcb158a5fe23338ff85bf897c2e2b4ee"
+    }
+  },
+  {
+    "id": 17,
+    "title": "24/7 Customer Support",
+    "png": "catalog/output/batch-002/24-7-Customer-Support.png",
+    "svg": "catalog/output/batch-002/24-7-Customer-Support.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "326f785f3cb99c5c436877d7a7229df62253c53f054bd89fe14084338d19bf37",
+      "svg": "695d55038a80e474af5a3ea4d09c8f81b01ecb8807a5603bfa8d8b0487730c42"
+    }
+  },
+  {
+    "id": 18,
+    "title": "24/7 Customer Support Services",
+    "png": "catalog/output/batch-002/24-7-Customer-Support-Services.png",
+    "svg": "catalog/output/batch-002/24-7-Customer-Support-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "3775fcdce67da4c1b45bbba358ad30f6d6eecf46729a187629d2da0db0a60d70",
+      "svg": "2c1bed198050becfa02ee44fddd0950649ea3de5177832238f664e94ab441a63"
+    }
+  },
+  {
+    "id": 19,
+    "title": "24/7 Dedicated Assistance",
+    "png": "catalog/output/batch-002/24-7-Dedicated-Assistance.png",
+    "svg": "catalog/output/batch-002/24-7-Dedicated-Assistance.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "a0051babb1fb681d58c40ce34f3714407fddb7d4efae6c91f027d49df78125e7",
+      "svg": "43f3434c98a117d9d3e86b4c11256432ee0cd7e27f56770525afeaee0639c3b1"
+    }
+  },
+  {
+    "id": 20,
+    "title": "24/7 Ecommerce Support",
+    "png": "catalog/output/batch-002/24-7-Ecommerce-Support.png",
+    "svg": "catalog/output/batch-002/24-7-Ecommerce-Support.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "92e41bde19032fb305178ee64d8140680eae145e4cff05a2bd67075740e51c4d",
+      "svg": "15b18d9916bb4ba260428f9878baffeaf060f60329797980d08f685ecae9210f"
+    }
+  },
+  {
+    "id": 21,
+    "title": "24/7 Global Coverage Across Channels",
+    "png": "catalog/output/batch-003/24-7-Global-Coverage-Across-Channels.png",
+    "svg": "catalog/output/batch-003/24-7-Global-Coverage-Across-Channels.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "8b8de3e0c069fa96dcb3faaacb341c9f703588f366333c52fb8778ce387ebfa9",
+      "svg": "50acfe5767e36cba340056f76eab3b5f7b1168bcb7cf4a494ad2a4cdf22e726a"
+    }
+  },
+  {
+    "id": 22,
+    "title": "24/7 Support",
+    "png": "catalog/output/batch-003/24-7-Support.png",
+    "svg": "catalog/output/batch-003/24-7-Support.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "1ba86678dcd10211a96729b7a87275344f016599a89ea50c7cc2460daaef4a5a",
+      "svg": "41e3056373bb8c4504486cd3790c6cc40e77741b1516b25c3c98bd64293c244c"
+    }
+  },
+  {
+    "id": 23,
+    "title": "24/7 Support, 365 Days a Year",
+    "png": "catalog/output/batch-003/24-7-Support-365-Days-a-Year.png",
+    "svg": "catalog/output/batch-003/24-7-Support-365-Days-a-Year.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "9eac45ea3c9f49c72763317436ef5379a9774136de9ef5aad5f342bbfd8d6786",
+      "svg": "3bedacd9617c9998f47a0da15d540e6889d55b33c52bcd667bde081a3e2a7ba9"
+    }
+  },
+  {
+    "id": 24,
+    "title": "24/7/365 Support",
+    "png": "catalog/output/batch-003/24-7-365-Support.png",
+    "svg": "catalog/output/batch-003/24-7-365-Support.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "5e66631847d542f1f9eef2a867a96553297f779f4dad06ee5f0c21269a63d1da",
+      "svg": "d54d79d326363b8074e4604293539546c54813181dc37074c3fa4e963d93b582"
+    }
+  },
+  {
+    "id": 25,
+    "title": "27/7 Availability",
+    "png": "catalog/output/batch-003/27-7-Availability.png",
+    "svg": "catalog/output/batch-003/27-7-Availability.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "41f560a5a8baea5f2fec9b434e859bc52b6b18672a892f20d5819842ee867a85",
+      "svg": "05b29b7f46caf2cb6a841073bfdda9a47b7e9cd1d8c70ff7eba7ad032388e4f1"
+    }
+  },
+  {
+    "id": 26,
+    "title": "2D Animation Services",
+    "png": "catalog/output/batch-003/2D-Animation-Services.png",
+    "svg": "catalog/output/batch-003/2D-Animation-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "3299ce18c4f451b194d587eb07b2217c201e2995570d2e235bb52e2f347fb720",
+      "svg": "574e1489ab79f4eb703151daa95e4b54a461b0829c4a0785521261e514a82714"
+    }
+  },
+  {
+    "id": 27,
+    "title": "2D Drafting",
+    "png": "catalog/output/batch-003/2D-Drafting.png",
+    "svg": "catalog/output/batch-003/2D-Drafting.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "944fc42a50ecb88fa38887b7f501b54b7dd184ee4db9aec3710d0a21c6eebc44",
+      "svg": "553b30ac8095139f9970649b7c3db88b91d382cfeb3665817d2994323b3524ac"
+    }
+  },
+  {
+    "id": 28,
+    "title": "2D Drafting Services",
+    "png": "catalog/output/batch-003/2D-Drafting-Services.png",
+    "svg": "catalog/output/batch-003/2D-Drafting-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "7b995b0ebaabb51c72184fd87c0710cc2fcbc9fcf8844d7d7d5977bca8570e2e",
+      "svg": "8bc58b3db0632a4af402913e120ef4d403023661bed128efc0e08385e4148b51"
+    }
+  },
+  {
+    "id": 29,
+    "title": "2D Medical Animation Process",
+    "png": "catalog/output/batch-003/2D-Medical-Animation-Process.png",
+    "svg": "catalog/output/batch-003/2D-Medical-Animation-Process.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "f399c3a5dc4ea7539016dcac6bb62eca39e28e014b3f63dcb13048cf8632d7c3",
+      "svg": "e1ecf4f60594a85ba3821be5a6abce3928c1e314ded3bdddcd20712b177d2ae6"
+    }
+  },
+  {
+    "id": 30,
+    "title": "2D Medical Animation Services",
+    "png": "catalog/output/batch-003/2D-Medical-Animation-Services.png",
+    "svg": "catalog/output/batch-003/2D-Medical-Animation-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "15ba427eecff0aa953ec12c149ab5dd9f98b75817f7906f419d2a3396370be4a",
+      "svg": "d1cda9d3be1d8f1fd63d3160c50ea0aadde8c25af6fb7fcb2cf82fbb19a6d633"
+    }
+  },
+  {
+    "id": 31,
+    "title": "3 Things We Take Care of While Developing iBeacon Apps",
+    "png": "catalog/output/batch-004/3-Things-We-Take-Care-of-While-Developing-iBeacon-Apps.png",
+    "svg": "catalog/output/batch-004/3-Things-We-Take-Care-of-While-Developing-iBeacon-Apps.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "e872d16dda44608bddf1a2e12162960c853c7b4b8c832b25300c8cab8e81a8a5",
+      "svg": "9ac28e1e6c0ccfacfa835950b5483bf0f4e28b83b90a4b9c92fc36ae5171d905"
+    }
+  },
+  {
+    "id": 32,
+    "title": "3-tier Quality Support Model",
+    "png": "catalog/output/batch-004/3-tier-Quality-Support-Model.png",
+    "svg": "catalog/output/batch-004/3-tier-Quality-Support-Model.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "b9aacce5e1d00247b2e0647269236444bd13b53a6b7b1c1a741d93aef4288251",
+      "svg": "b8c83c02e3d2aff72acbd9e95b3de0b65be94f681ea58af0961b00faa509b83b"
+    }
+  },
+  {
+    "id": 33,
+    "title": "360 Video Editing Services",
+    "png": "catalog/output/batch-004/360-Video-Editing-Services.png",
+    "svg": "catalog/output/batch-004/360-Video-Editing-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "7bac0c63d5976144b14bd8af61d68bb79e84cab8429fa25c9a9aa146bb91c5cf",
+      "svg": "0dc3deefd4d6256627042c5fc5c6f448d9339b8b66dd1e74208b67671cb60280"
+    }
+  },
+  {
+    "id": 34,
+    "title": "360\u00b0 Drone Image Panorama",
+    "png": "catalog/output/batch-004/360-Drone-Image-Panorama.png",
+    "svg": "catalog/output/batch-004/360-Drone-Image-Panorama.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "77f1f94e61c71e42993eb3d474e62053a8de638c1d01e217127c53fb0f8cd2ef",
+      "svg": "fab5e8ccbb80f236778a0bdec17b4a5d86311e8caea8696a7bf36a1b2c879a87"
+    }
+  },
+  {
+    "id": 35,
+    "title": "360\u00b0 Panorama Photo Stitching",
+    "png": "catalog/output/batch-004/360-Panorama-Photo-Stitching.png",
+    "svg": "catalog/output/batch-004/360-Panorama-Photo-Stitching.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "b5e1e0bf814d75f5df3253e0cb23a1843ca0ac01d96484e8eae382b9505009e2",
+      "svg": "fb261699d044930bc4139cc6da6e33b167194fd387e9048461639c17042e7ba5"
+    }
+  },
+  {
+    "id": 36,
+    "title": "3D Animation Services",
+    "png": "catalog/output/batch-004/3D-Animation-Services.png",
+    "svg": "catalog/output/batch-004/3D-Animation-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "715da005a70becb6c8dc35e13a4e255c07ecec0fad045a00e5deafd335c44ac3",
+      "svg": "10a13d01ba8de326596ddecd1522819ef8998e319d1c7d748cb7ae5fc5b684bf"
+    }
+  },
+  {
+    "id": 37,
+    "title": "3D Architectural Animation",
+    "png": "catalog/output/batch-004/3D-Architectural-Animation.png",
+    "svg": "catalog/output/batch-004/3D-Architectural-Animation.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "a18ae0bf5058e30bd8ae9036de06f3335196a096934b3f8625fc4666af58ed3b",
+      "svg": "83c54471af19b936426fdd6addad6fa33704440476bc2a165f7aaa0adebe723e"
+    }
+  },
+  {
+    "id": 38,
+    "title": "3D CAD Drafting Services",
+    "png": "catalog/output/batch-004/3D-CAD-Drafting-Services.png",
+    "svg": "catalog/output/batch-004/3D-CAD-Drafting-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "0e4da097b6d54527ce766612220a850262621fd491c7a2e5fed1d249ac745ea6",
+      "svg": "0743b885142f9a0d67079b446bd227c708297243dbc202baaf8ae714ea20bd11"
+    }
+  },
+  {
+    "id": 39,
+    "title": "3D Image Processing Services",
+    "png": "catalog/output/batch-004/3D-Image-Processing-Services.png",
+    "svg": "catalog/output/batch-004/3D-Image-Processing-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "a1332249ac8575d2420c3446c08d57b8ad9e0d9775b046b7ad67215999b4a5ba",
+      "svg": "62c48f072ddc1ecbd6b0b9b65d1e6a3969de5dbf0d328a8ae14f6becdf60967b"
+    }
+  },
+  {
+    "id": 40,
+    "title": "3D Medical Animations - Why You Need It?",
+    "png": "catalog/output/batch-004/3D-Medical-Animations-Why-You-Need-It.png",
+    "svg": "catalog/output/batch-004/3D-Medical-Animations-Why-You-Need-It.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "9bd50c174812517f083cdcfc33e1d6257a871611cebd54e083c1af1d9ffe597f",
+      "svg": "04d8eeefa24499aedbede78336e175f2b024ca62f4aef364e3dbbf55510551dd"
+    }
+  },
+  {
+    "id": 41,
+    "title": "3D Modeling & Drafting",
+    "png": "catalog/output/batch-005/3D-Modeling-Drafting.png",
+    "svg": "catalog/output/batch-005/3D-Modeling-Drafting.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "fcc8e30fa86cf8cf28031a647cf62514143e182cbcbcedc9b2384c025cdaa93f",
+      "svg": "03186b0a25da93b120cb0796e44fd190206c90ea0859b91b7bc297b52efdacd1"
+    }
+  },
+  {
+    "id": 42,
+    "title": "3D Part Modeling Services",
+    "png": "catalog/output/batch-005/3D-Part-Modeling-Services.png",
+    "svg": "catalog/output/batch-005/3D-Part-Modeling-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "3cd46247bb236ca937793f42f642ede3c587a50bbc6fc6aad388de8105ad5e46",
+      "svg": "96bd39384fa934d409beba302e40abe2527fe560aec96c405129564aab20bbd6"
+    }
+  },
+  {
+    "id": 43,
+    "title": "3D Part Modeling Software We Leverage",
+    "png": "catalog/output/batch-005/3D-Part-Modeling-Software-We-Leverage.png",
+    "svg": "catalog/output/batch-005/3D-Part-Modeling-Software-We-Leverage.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "4671857272dc163b9f611edc2420136f4d66232061c3e6f7794392b7acf7fd85",
+      "svg": "a3b8f6857df3b70d250a3c9eb9da5d4e9c40a7de21cc0556c376037c4f69f70b"
+    }
+  },
+  {
+    "id": 44,
+    "title": "3D Product Rendering and Modeling Process We Follow",
+    "png": "catalog/output/batch-005/3D-Product-Rendering-and-Modeling-Process-We-Follow.png",
+    "svg": "catalog/output/batch-005/3D-Product-Rendering-and-Modeling-Process-We-Follow.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "94a1760cc64b6b0cc1639328bf6433559a154cd20e49b45ce666916d20ac54c7",
+      "svg": "806870019d05ac1b60124d0dc0aaf9d7353e199e0d504dbfb8ccc78a11c8147e"
+    }
+  },
+  {
+    "id": 45,
+    "title": "3D Rendering Services",
+    "png": "catalog/output/batch-005/3D-Rendering-Services.png",
+    "svg": "catalog/output/batch-005/3D-Rendering-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "a2eb3647e042abef5cf920cce7da49ff6939d2c5d249136d600d54512255df38",
+      "svg": "504ef223244c123eb6e1bf5e52fa2c0fb9a819bb109e846746ba5e1576f8d9fa"
+    }
+  },
+  {
+    "id": 46,
+    "title": "3D Sculpting Services",
+    "png": "catalog/output/batch-005/3D-Sculpting-Services.png",
+    "svg": "catalog/output/batch-005/3D-Sculpting-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "22ac69d8f17dca6500d03b5c84e56ccef065733d27a983b529c9b1a7e8f255be",
+      "svg": "538f6b71c4d5630d274713304006a0dbd88db3f8242a9e5d3ed515daf1c32ebe"
+    }
+  },
+  {
+    "id": 47,
+    "title": "3D Textured Mesh",
+    "png": "catalog/output/batch-005/3D-Textured-Mesh.png",
+    "svg": "catalog/output/batch-005/3D-Textured-Mesh.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "701467bc38b621ba400867a3b73213a5e7f9cb53bd48c4b3edd5f59592b10b8e",
+      "svg": "4e673ac20419e980600d19143bd1e880f0c4bf074615e9749db3898368ed45d1"
+    }
+  },
+  {
+    "id": 48,
+    "title": "3D Virtual Tours & Walkthrough",
+    "png": "catalog/output/batch-005/3D-Virtual-Tours-Walkthrough.png",
+    "svg": "catalog/output/batch-005/3D-Virtual-Tours-Walkthrough.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "7f9e1cafa1da4e350019bf7ff6afbc19334ccf9a8b0671f709133c2e29afb7d4",
+      "svg": "716cca7e76fe93802934011fee3ffe41cb2f8580ae200f3b325ac54c40ca0a10"
+    }
+  },
+  {
+    "id": 49,
+    "title": "3D Walkthroughs",
+    "png": "catalog/output/batch-005/3D-Walkthroughs.png",
+    "svg": "catalog/output/batch-005/3D-Walkthroughs.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "3d47f4f76809ff0418426c04373f60a6b057054816e2ab02ab0b34806072c49f",
+      "svg": "5896dd2931bf782cfac92396d2801aa8554d93c5b1889811611a340cb53f017b"
+    }
+  },
+  {
+    "id": 50,
+    "title": "3dcart Data Entry Services",
+    "png": "catalog/output/batch-005/3dcart-Data-Entry-Services.png",
+    "svg": "catalog/output/batch-005/3dcart-Data-Entry-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "7524d2110149e93efa960577494a78af81bf4de9fa345700f3690b465a7c842b",
+      "svg": "7c72651f8ae9bac3f907a4f580933b1717ceac9766fc48527f08115b36c0a5be"
+    }
+  },
+  {
+    "id": 51,
+    "title": "4D Construction, Demolition, and Renovation Services",
+    "png": "catalog/output/batch-006/4D-Construction-Demolition-and-Renovation-Services.png",
+    "svg": "catalog/output/batch-006/4D-Construction-Demolition-and-Renovation-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "ab204c6be846603b00296d810a996cea7e02946d63f33908f3f0bce2576da67a",
+      "svg": "fa6d2e1ecbf398321d93584fe0a13acd06a84cfa57884046a38c12a4d4b2caed"
+    }
+  },
+  {
+    "id": 52,
+    "title": "5-Step FWS Food Nutrition Scale Data Entry Process Flow",
+    "png": "catalog/output/batch-006/5-Step-FWS-Food-Nutrition-Scale-Data-Entry-Process-Flow.png",
+    "svg": "catalog/output/batch-006/5-Step-FWS-Food-Nutrition-Scale-Data-Entry-Process-Flow.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "f7882b8e15d103042b69b72f3cc553a2b615f59fb7bca1198d5cf44da085f079",
+      "svg": "e420547c9947811ad71ac1e058e75f34329f24bab7fb0a9b2dab8d86f531780d"
+    }
+  },
+  {
+    "id": 53,
+    "title": "5-step Lead Scoring Process We Follow",
+    "png": "catalog/output/batch-006/5-step-Lead-Scoring-Process-We-Follow.png",
+    "svg": "catalog/output/batch-006/5-step-Lead-Scoring-Process-We-Follow.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "364047d44597d9b76d6e6e31ed50af79d795ad1dec56a95aa61a98f27be4661c",
+      "svg": "17febed5daf685449699e3e909b756f815d3822ee4ef5310831a9d069b61221f"
+    }
+  },
+  {
+    "id": 54,
+    "title": "5. Average Call Count per Week",
+    "png": "catalog/output/batch-006/5-Average-Call-Count-per-Week.png",
+    "svg": "catalog/output/batch-006/5-Average-Call-Count-per-Week.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "64e088b3bd7e43426e54addc59708b8a6e989ee011683b15d371a9c494e5926c",
+      "svg": "f41b2f4fa96ece28f0cd22f0c260988b425b72044df29882546dfc60f001f99e"
+    }
+  },
+  {
+    "id": 55,
+    "title": "5. Test Environment for MSuite",
+    "png": "catalog/output/batch-006/5-Test-Environment-for-MSuite.png",
+    "svg": "catalog/output/batch-006/5-Test-Environment-for-MSuite.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "a3d5f7a7fb10bbf91ee0d12908c89690d9abe7efcd24e56275dc0ab92eacdcaf",
+      "svg": "b4b307d1a84a486d676a531ac49dda5ebd781df70c408a4eb7c9e30353bb8f78"
+    }
+  },
+  {
+    "id": 56,
+    "title": "6 Step Review and Summary Writing Process We Follow",
+    "png": "catalog/output/batch-006/6-Step-Review-and-Summary-Writing-Process-We-Follow.png",
+    "svg": "catalog/output/batch-006/6-Step-Review-and-Summary-Writing-Process-We-Follow.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "a92a1116755583ddbf8e7aebd09e7cfc8997b2782cee17914941f211bb2b4f8d",
+      "svg": "a0fca4b965edfe436db1010eed57c4861b60798d627e3c6cd5dc3ea35715bdb0"
+    }
+  },
+  {
+    "id": 57,
+    "title": "6-step PARS Entry Process We Follow",
+    "png": "catalog/output/batch-006/6-step-PARS-Entry-Process-We-Follow.png",
+    "svg": "catalog/output/batch-006/6-step-PARS-Entry-Process-We-Follow.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "b492b04fe6b9593824a1e5ccc81d3221ec9801a89e79e7b5e125d738d1f68e7a",
+      "svg": "8bc123208ca80ef5108c3ebc4654077d95e23cc2a99703bafa8b9b6df2b6696d"
+    }
+  },
+  {
+    "id": 58,
+    "title": "6. Average Handling Time",
+    "png": "catalog/output/batch-006/6-Average-Handling-Time.png",
+    "svg": "catalog/output/batch-006/6-Average-Handling-Time.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "8d4f87ece4f124e84707357e313b817d1841be4881444668eed14a06a7d26849",
+      "svg": "a2b12e649f92506e43ef13684152e8640cee0ebd9b61d232adf0cb35f8b40ee2"
+    }
+  },
+  {
+    "id": 59,
+    "title": "7 Applications of Convolutional Neural Networks",
+    "png": "catalog/output/batch-006/7-Applications-of-Convolutional-Neural-Networks.png",
+    "svg": "catalog/output/batch-006/7-Applications-of-Convolutional-Neural-Networks.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "97ee13efbb0f5393f8a12449e5bf0a185a8a5648262f40fd048dff3f7531b1ab",
+      "svg": "c084a8dce2ea664c3d0174a3030cc19950be2acbef9914f4565b39e464bba8c2"
+    }
+  },
+  {
+    "id": 60,
+    "title": "7 Benefits of Outsourcing Video Summary Services to Us",
+    "png": "catalog/output/batch-006/7-Benefits-of-Outsourcing-Video-Summary-Services-to-Us.png",
+    "svg": "catalog/output/batch-006/7-Benefits-of-Outsourcing-Video-Summary-Services-to-Us.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "87801d20a4c4aedee9cb2538784150600050e147557f28e17f50819e2748ba75",
+      "svg": "d463e6984339e1e9f02054d2212d1121d743dfc42b0ca83221cadb013e2146d9"
+    }
+  },
+  {
+    "id": 61,
+    "title": "7 Reasons to Choose Flatworld for Email Design Services",
+    "png": "catalog/output/batch-007/7-Reasons-to-Choose-Flatworld-for-Email-Design-Services.png",
+    "svg": "catalog/output/batch-007/7-Reasons-to-Choose-Flatworld-for-Email-Design-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "b69ba82a7ca1d8eb39b8654dd0ab3880d87816d5430ddc7a3573dbb9ebee050d",
+      "svg": "effd82710a179ad56ac1413fb7c4acadc9c77f2d289ca53bdd6aad30a84a5227"
+    }
+  },
+  {
+    "id": 62,
+    "title": "7 Reasons to Choose Flatworld Solutions for Discharge Summary Transcriptions",
+    "png": "catalog/output/batch-007/7-Reasons-to-Choose-Flatworld-Solutions-for-Discharge-Summary-Transcriptions.png",
+    "svg": "catalog/output/batch-007/7-Reasons-to-Choose-Flatworld-Solutions-for-Discharge-Summary-Transcriptions.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "828521422451d08d1c7a1d13aa28f5f4774b031d6efba2e9d5cf65c7b7f89b64",
+      "svg": "3393a699fd1f97cd9655f254c526c5e0989a7908671c3af190f9ff791ce127b1"
+    }
+  },
+  {
+    "id": 63,
+    "title": "7 Reasons to Choose Our Multi-channel Contact Center Services",
+    "png": "catalog/output/batch-007/7-Reasons-to-Choose-Our-Multi-channel-Contact-Center-Services.png",
+    "svg": "catalog/output/batch-007/7-Reasons-to-Choose-Our-Multi-channel-Contact-Center-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "8ce132d70bada67ee963ed1efb8f0f5d801a7a4149abd74817c81197e15a0988",
+      "svg": "1241c49dab431cae5359da7257f06c3cbd283757266ab291541774c2434c0923"
+    }
+  },
+  {
+    "id": 64,
+    "title": "7 Reasons to Choose Us for Corporate Financial Support",
+    "png": "catalog/output/batch-007/7-Reasons-to-Choose-Us-for-Corporate-Financial-Support.png",
+    "svg": "catalog/output/batch-007/7-Reasons-to-Choose-Us-for-Corporate-Financial-Support.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "37e0f197a12a4e78abb9f499122813023ab18fd0916d0cc313817a3d692021d3",
+      "svg": "e659824f80ae8380796a442b4e1dbbfbfdd2d13100f3b3137329d27e514755fc"
+    }
+  },
+  {
+    "id": 65,
+    "title": "7 Reasons to Choose Us for Video Brochure Services",
+    "png": "catalog/output/batch-007/7-Reasons-to-Choose-Us-for-Video-Brochure-Services.png",
+    "svg": "catalog/output/batch-007/7-Reasons-to-Choose-Us-for-Video-Brochure-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "bf078be0e2f93421c72c5f927e1d27a4bc56f910d15d890f8efca3ecb1a0c805",
+      "svg": "9b90575a87c27c234a1481b5362e5642d74068ee24018ecedfc3978332433c5e"
+    }
+  },
+  {
+    "id": 66,
+    "title": "7 Reasons to Outsource Fraud Analysis Software Development to Us",
+    "png": "catalog/output/batch-007/7-Reasons-to-Outsource-Fraud-Analysis-Software-Development-to-Us.png",
+    "svg": "catalog/output/batch-007/7-Reasons-to-Outsource-Fraud-Analysis-Software-Development-to-Us.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "ef7438cf813ca1d5443e0f5fde80e76e7ceefe1d6d133174433637dcd2d21cf4",
+      "svg": "02eaa65d08436cbb661afc22c66096a7e94fbfd76896c37563d70d3cc37a6545"
+    }
+  },
+  {
+    "id": 67,
+    "title": "8 Advantages of Choosing Flatworld for Photo Correction Services",
+    "png": "catalog/output/batch-007/8-Advantages-of-Choosing-Flatworld-for-Photo-Correction-Services.png",
+    "svg": "catalog/output/batch-007/8-Advantages-of-Choosing-Flatworld-for-Photo-Correction-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "48c7be8a1055e8074d2417ac9157564a4b7da88eab0f679b35aed40428caf359",
+      "svg": "c84264c8346f93e61fd60095e41a8fdb308b4a30bc8d096c1d928766aac2bd55"
+    }
+  },
+  {
+    "id": 68,
+    "title": "8 Reasons to choose Flatworld Solutions for HL7 Medical Transcription Service:",
+    "png": "catalog/output/batch-007/8-Reasons-to-choose-Flatworld-Solutions-for-HL7-Medical-Transcription-Service.png",
+    "svg": "catalog/output/batch-007/8-Reasons-to-choose-Flatworld-Solutions-for-HL7-Medical-Transcription-Service.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "38e06cd5a2a16a701f29f7f3285ef4a4d00d3c04f05ce7f07279e92e58a9f2b3",
+      "svg": "4dde02728ede9ed7ef3ee37a0eab5724ddaea764a577c957d8090e348deaa6dd"
+    }
+  },
+  {
+    "id": 69,
+    "title": "8-Step Insurance Policy Checking Process We Follow",
+    "png": "catalog/output/batch-007/8-Step-Insurance-Policy-Checking-Process-We-Follow.png",
+    "svg": "catalog/output/batch-007/8-Step-Insurance-Policy-Checking-Process-We-Follow.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "11d379b7d6799cf5ce4bbf195f3b72494245ec969674eece72cb630e64d8ba40",
+      "svg": "ed55aa1d882344d6d2dccf7416140ca81d179ceaec9c2163c8c47ffe61f1b65a"
+    }
+  },
+  {
+    "id": 70,
+    "title": "99.1% On-time Delivery Record",
+    "png": "catalog/output/batch-007/99-1-On-time-Delivery-Record.png",
+    "svg": "catalog/output/batch-007/99-1-On-time-Delivery-Record.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "469170e5dcf01e1688ef3d48648c76c41476bf07e3718b4ca3905cb9a97e0c2a",
+      "svg": "29701f18ee6a461efc03f1738ad77a7631d7bce87c348e6d34153a990ad2b228"
+    }
+  },
+  {
+    "id": 71,
+    "title": "A Satisfactory Project Outcome",
+    "png": "catalog/output/batch-008/A-Satisfactory-Project-Outcome.png",
+    "svg": "catalog/output/batch-008/A-Satisfactory-Project-Outcome.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "c2d3b3f581c7b6a94986ad3259c2edc14e53091b8dfeb1a2b6a85f4b86716bab",
+      "svg": "5c9b69b249ab52710b7c6562642185ee92a9a81648826005549954cd6de70265"
+    }
+  },
+  {
+    "id": 72,
+    "title": "A spectrum of forms processing services at Flatworld Solutions",
+    "png": "catalog/output/batch-008/A-spectrum-of-forms-processing-services-at-Flatworld-Solutions.png",
+    "svg": "catalog/output/batch-008/A-spectrum-of-forms-processing-services-at-Flatworld-Solutions.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "ad59db39edb0747c4262a59ea4713f9623c7f641d91211dfe37cb3aec62e283d",
+      "svg": "32d7157ae3e9a3234dcd2fab185a19a3327f47bd54208baab5f8314e9d951b6b"
+    }
+  },
+  {
+    "id": 73,
+    "title": "About Drupal",
+    "png": "catalog/output/batch-008/About-Drupal.png",
+    "svg": "catalog/output/batch-008/About-Drupal.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "53ab34ac4233911c1d7bc4386fae6a51d6f9f73309f2251303465f7f2169b323",
+      "svg": "b695b84d948bbe713e3b9a490208fbf0811993c2e30a969064de3ba99570780e"
+    }
+  },
+  {
+    "id": 74,
+    "title": "About the author",
+    "png": "catalog/output/batch-008/About-the-author.png",
+    "svg": "catalog/output/batch-008/About-the-author.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "bc13d0830ba6b075551e74dbd4b3f5c99cf19d481f0e24c56cd1bec791f5a76b",
+      "svg": "69f474a574c1086a88428ace35e26ee9c2e4a891e1398439b6674a8774275e21"
+    }
+  },
+  {
+    "id": 75,
+    "title": "Academic Book Indexing",
+    "png": "catalog/output/batch-008/Academic-Book-Indexing.png",
+    "svg": "catalog/output/batch-008/Academic-Book-Indexing.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "f692eb969d34c9e2cacdeaeaeabe6abf710f0ce8f1c6d1f59f7df3a4ab217bbb",
+      "svg": "c46d18c07fbb6280b212b9e8f0977d54a2a39f1368c25d5d7ccb3ab769e5fd2c"
+    }
+  },
+  {
+    "id": 76,
+    "title": "Academic Lecture Promoters",
+    "png": "catalog/output/batch-008/Academic-Lecture-Promoters.png",
+    "svg": "catalog/output/batch-008/Academic-Lecture-Promoters.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "a3a0c60401ce5863b7ca0b3f6ab3e56aaa24b33fcb7fc2d376b16e3e8227a9f7",
+      "svg": "705513f92e8ca470da95b33ce44e8e277fa5fb131098f3f42aaa858d53af66d1"
+    }
+  },
+  {
+    "id": 77,
+    "title": "Academic Transcription Services",
+    "png": "catalog/output/batch-008/Academic-Transcription-Services.png",
+    "svg": "catalog/output/batch-008/Academic-Transcription-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "db2ac0f25294a4dfb22d0dbfc5448f2d8d06ed7f05ee9961f6f98da829e15624",
+      "svg": "5e75f9dec6665f80dc8fcfa8101abe998e2a877d05c3564859402d149a510ce8"
+    }
+  },
+  {
+    "id": 78,
+    "title": "Access Account Balance",
+    "png": "catalog/output/batch-008/Access-Account-Balance.png",
+    "svg": "catalog/output/batch-008/Access-Account-Balance.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "66bc26bfe5ce997b1c6f446daa11f90bdfc3ee5759de789c235a900332e44027",
+      "svg": "7c998a71efc35af33a269afcef34982bd36eab9e994a3ea5d95e0a4081665237"
+    }
+  },
+  {
+    "id": 79,
+    "title": "Access the patient's health status",
+    "png": "catalog/output/batch-008/Access-the-patient-s-health-status.png",
+    "svg": "catalog/output/batch-008/Access-the-patient-s-health-status.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "3572863dcf1dfbc3dcba119221e83ab9d11f3bdef3c3ec29d181e67d16a29952",
+      "svg": "b756b79ea8295ab1327576c1ad754ab8b3b13b08b6c03c8e0ab24781013f7aba"
+    }
+  },
+  {
+    "id": 80,
+    "title": "Access to a highly talented workforce",
+    "png": "catalog/output/batch-008/Access-to-a-highly-talented-workforce.png",
+    "svg": "catalog/output/batch-008/Access-to-a-highly-talented-workforce.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "00d5401f4a08ad358ab015dad8414ed1090f40acab5bd1ad11a9b864723e292c",
+      "svg": "f051a1d73f12cdf1ca06549f87011200a7c0b60ed5c43fd36bd69ce3cc04d0b2"
+    }
+  },
+  {
+    "id": 81,
+    "title": "Access to Expertise and Continuous Innovation",
+    "png": "catalog/output/batch-009/Access-to-Expertise-and-Continuous-Innovation.png",
+    "svg": "catalog/output/batch-009/Access-to-Expertise-and-Continuous-Innovation.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "051bdf3654b6b840dc115245df0676dcc6f6200ac50f6ed5c2f9cfeb6ed7b4b2",
+      "svg": "23bec2639bb12030db0bdac6ffe8ad39f579b6d57c0aa40510ea5cb951abc76c"
+    }
+  },
+  {
+    "id": 82,
+    "title": "Accommodating Changes",
+    "png": "catalog/output/batch-009/Accommodating-Changes.png",
+    "svg": "catalog/output/batch-009/Accommodating-Changes.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "061f38c6bd7cc48f7f19ca6452672d1ff916e478f65cb1f2c068efedbdcdf43a",
+      "svg": "77405656bf9c9dabec653baaa65231ac9115888afe3bd0cbb82ee87faf9f1565"
+    }
+  },
+  {
+    "id": 83,
+    "title": "Account Receivables",
+    "png": "catalog/output/batch-009/Account-Receivables.png",
+    "svg": "catalog/output/batch-009/Account-Receivables.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "4fbf86c165ab7c405b7cffa0ea917f24360644c9a7d10c091bf81b7656eed929",
+      "svg": "d4e8f00b21c81a5b8d201c1ef312c58c1389077417a17b3678ba9aa8c4da3d6e"
+    }
+  },
+  {
+    "id": 84,
+    "title": "Accounting Services",
+    "png": "catalog/output/batch-009/Accounting-Services.png",
+    "svg": "catalog/output/batch-009/Accounting-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "3ab395affdd4fddef58defc0992f9f0a7261e8eba9d5cebd6928aa7b4d2dd846",
+      "svg": "384bacca617e6418140c2aabe5b9e33482a6a40c66351983c42e673fa423f649"
+    }
+  },
+  {
+    "id": 85,
+    "title": "Accounting Software Services",
+    "png": "catalog/output/batch-009/Accounting-Software-Services.png",
+    "svg": "catalog/output/batch-009/Accounting-Software-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "56b089763919edb77597e3c4feda5d05abe3f1f569afb01a12a9e53956516eea",
+      "svg": "869083db7a0fdc37b8cd90d19c925082f5ccd5c65131c478d68bca22a53d69a5"
+    }
+  },
+  {
+    "id": 86,
+    "title": "Accounting Software We Leverage",
+    "png": "catalog/output/batch-009/Accounting-Software-We-Leverage.png",
+    "svg": "catalog/output/batch-009/Accounting-Software-We-Leverage.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "35a3c832a691a0cb4bf1ec779baf77bdbd8b34a84d8e469f4b5d5343b3fce9ab",
+      "svg": "84613a66a8a460f986493b188fd1b5b1750cd5aead8542859386d189336670f3"
+    }
+  },
+  {
+    "id": 87,
+    "title": "Accounting Vs. Bookkeeping: The Essential Partnership Between Them",
+    "png": "catalog/output/batch-009/Accounting-Vs-Bookkeeping-The-Essential-Partnership-Between-Them.png",
+    "svg": "catalog/output/batch-009/Accounting-Vs-Bookkeeping-The-Essential-Partnership-Between-Them.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "a1856110ef33e1a9e23bd5f2f069df10da9673c1ce56264496d31d21dadff259",
+      "svg": "ecf3a34001c10826a9279fc5377ea11474eab79d535f2924b71a62c6f398bbbb"
+    }
+  },
+  {
+    "id": 88,
+    "title": "Accounts Payable Services",
+    "png": "catalog/output/batch-009/Accounts-Payable-Services.png",
+    "svg": "catalog/output/batch-009/Accounts-Payable-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "1237fb1e84214d1b79ef71ae2a49b289db267fe84d6bb107c24e29322eafc965",
+      "svg": "0aa3ab1496664c57bdc0a4277058e59acda81328c7cfb7e8c6129f87be33a2d0"
+    }
+  },
+  {
+    "id": 89,
+    "title": "Accounts Receivable Aging Report Creation Services We Offer",
+    "png": "catalog/output/batch-009/Accounts-Receivable-Aging-Report-Creation-Services-We-Offer.png",
+    "svg": "catalog/output/batch-009/Accounts-Receivable-Aging-Report-Creation-Services-We-Offer.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "83ae5af81775e153f1e66f5ad87310326a5b9109d2f075e1e31f3af993ce8477",
+      "svg": "65fb9878d877e0b0d4a8b92e1973d59a45c2e121ac6aff8449a44daeb086971d"
+    }
+  },
+  {
+    "id": 90,
+    "title": "Accounts Receivable Services",
+    "png": "catalog/output/batch-009/Accounts-Receivable-Services.png",
+    "svg": "catalog/output/batch-009/Accounts-Receivable-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "10663485b76831f675f7cb3997913fb824e53a4fae75ec19c1f11b33972d02d3",
+      "svg": "6d7fed8a584b272a0d7ffc75707f74e7c1d0d0531257838f45a11f23936ff78b"
+    }
+  },
+  {
+    "id": 91,
+    "title": "Accounts Receivable Software We Use",
+    "png": "catalog/output/batch-010/Accounts-Receivable-Software-We-Use.png",
+    "svg": "catalog/output/batch-010/Accounts-Receivable-Software-We-Use.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "b583f87f490c3b6e16c008246de098115a9833506bd0c3a0d616dc9513969b94",
+      "svg": "2684f3b62717b8c0ee90d667f794213b77a41c83cd29b0dc2a51d00cf49553d9"
+    }
+  },
+  {
+    "id": 92,
+    "title": "Accounts Receivables Services",
+    "png": "catalog/output/batch-010/Accounts-Receivables-Services.png",
+    "svg": "catalog/output/batch-010/Accounts-Receivables-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "e06aa98e2d00683da49c33b1442e4a059a2351a31ce68f14a37fa87e732fb8c8",
+      "svg": "14d667352843dd36a07f1132970fc197a88ceb98eeb590c4de3774797e63f0a9"
+    }
+  },
+  {
+    "id": 93,
+    "title": "Accounts Reconciliation Services",
+    "png": "catalog/output/batch-010/Accounts-Reconciliation-Services.png",
+    "svg": "catalog/output/batch-010/Accounts-Reconciliation-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "fb5a7b59393ec0351e6c7302ddc582a9589571ed13589ba6cb4f4fd042a9aea9",
+      "svg": "61d138f318d0683fe2135c102d5fe709ec8e25e1e7537171ceb1b96179d9e7c5"
+    }
+  },
+  {
+    "id": 94,
+    "title": "Accuracy and Quality Assurance",
+    "png": "catalog/output/batch-010/Accuracy-and-Quality-Assurance.png",
+    "svg": "catalog/output/batch-010/Accuracy-and-Quality-Assurance.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "3a49be893968dcddad16cd82c7d6f816fda1a963b3269165890271792a0fa104",
+      "svg": "8c0c894b778954864d92a950278cb89a1b13e3bda1e768f8220a50395c7a1f4e"
+    }
+  },
+  {
+    "id": 95,
+    "title": "Achieving Success - A 10-Step Plan for Effective NLP Deployment",
+    "png": "catalog/output/batch-010/Achieving-Success-A-10-Step-Plan-for-Effective-NLP-Deployment.png",
+    "svg": "catalog/output/batch-010/Achieving-Success-A-10-Step-Plan-for-Effective-NLP-Deployment.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "349d53dc5de1151d71e23e14b930f56b329bcda7c7db18828dcbbb6df89437ac",
+      "svg": "2f834dbdb54dff297ec91db2a7f428b3cc2a768f6266abffacfe6b42c6fa9b9c"
+    }
+  },
+  {
+    "id": 96,
+    "title": "Ad Campaign Execution",
+    "png": "catalog/output/batch-010/Ad-Campaign-Execution.png",
+    "svg": "catalog/output/batch-010/Ad-Campaign-Execution.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "8eec96ab549a3be04eacf1f24dd130a5efbf350c04b1bc86e167b3a448d41b0d",
+      "svg": "972a57b4c5ab2341948dd8563c29f5e274b25daacc5a1c4499e205f41f60bd65"
+    }
+  },
+  {
+    "id": 97,
+    "title": "Additional Assistance",
+    "png": "catalog/output/batch-010/Additional-Assistance.png",
+    "svg": "catalog/output/batch-010/Additional-Assistance.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "888589f51ac385a76b6a791c147e5697583ea70f0becc8ded8f64df1a6fddc50",
+      "svg": "ecc6b82d470b7a5daf00fd6a64058163d7178c2a7fdbbc4ce7ab7ab8da39cc3d"
+    }
+  },
+  {
+    "id": 98,
+    "title": "Additional Features",
+    "png": "catalog/output/batch-010/Additional-Features.png",
+    "svg": "catalog/output/batch-010/Additional-Features.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "7767f35132a3229efb95dd68836b67c3a21a6d78cd0dca9f97edba503a1c02b6",
+      "svg": "069e13f4d4dfe280eb3d8e6b301ac330e73d340dc59aa4b38e09feaac84c414c"
+    }
+  },
+  {
+    "id": 99,
+    "title": "Additional Resources",
+    "png": "catalog/output/batch-010/Additional-Resources.png",
+    "svg": "catalog/output/batch-010/Additional-Resources.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "647ef9b4b9a32f1e9556d53f2bd5f6d970c6ceecf7d481d4ef565498f753f3c0",
+      "svg": "058efb941f8a9bd82dbffc605e50c5400137bf758c7d9924a06f0a81d0c19d00"
+    }
+  },
+  {
+    "id": 100,
+    "title": "Additional Resources to Browse Through",
+    "png": "catalog/output/batch-010/Additional-Resources-to-Browse-Through.png",
+    "svg": "catalog/output/batch-010/Additional-Resources-to-Browse-Through.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "eb9e0cb84d8c004c16e766d905d04c7209de03e22d4a25dcbafb010f18db39d7",
+      "svg": "adb8a4a8a8823859d5be0488405d8da1fd8594d22acacc37e713bbdff030a22f"
+    }
+  },
+  {
+    "id": 101,
+    "title": "Additional Resources to Explore",
+    "png": "catalog/output/batch-011/Additional-Resources-to-Explore.png",
+    "svg": "catalog/output/batch-011/Additional-Resources-to-Explore.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "5f414422bab26ce4c75caa7d98cbdc882f8509e991fb340b5209ddcbae702ba6",
+      "svg": "30e4cdf444fdc3eda4607eb5a5a6d18cf36389aeef38a67183e0ab02e4e057b0"
+    }
+  },
+  {
+    "id": 102,
+    "title": "Additional Services",
+    "png": "catalog/output/batch-011/Additional-Services.png",
+    "svg": "catalog/output/batch-011/Additional-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "852cfe550249c2907b31062897e1c8b20d1e74ea1366e5271e3f3276ccb82282",
+      "svg": "77c12fb5ca07fc233e125aefe4f98ad39c2203e6c04b99f7f28c9d98e3bab9c2"
+    }
+  },
+  {
+    "id": 103,
+    "title": "Additional Services We Can Benefit From",
+    "png": "catalog/output/batch-011/Additional-Services-We-Can-Benefit-From.png",
+    "svg": "catalog/output/batch-011/Additional-Services-We-Can-Benefit-From.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "17d3b2bc4ae910525be6ee08eca50c708bbc5de86765a4cbe8440ae3b527c4ae",
+      "svg": "0e4330caf7cddef72ec4a5cb25018c9b174989592861ed1edf376310388e368c"
+    }
+  },
+  {
+    "id": 104,
+    "title": "Additional Services We Offer",
+    "png": "catalog/output/batch-011/Additional-Services-We-Offer.png",
+    "svg": "catalog/output/batch-011/Additional-Services-We-Offer.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "e158830963dd34b269b7e667078a004bf000496f4d4733b141831677815a683c",
+      "svg": "9181c448c3872fc5434034ac0045b2a6527f6d629e12aa72ebeea9b9f0b41d17"
+    }
+  },
+  {
+    "id": 105,
+    "title": "Additional Services You Benefit From",
+    "png": "catalog/output/batch-011/Additional-Services-You-Benefit-From.png",
+    "svg": "catalog/output/batch-011/Additional-Services-You-Benefit-From.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "7ba0007d292de0799617da01eac760a9427cea143e59dc51a7b62e44e8874384",
+      "svg": "b8536e0cd3fd5d9f7c10e1e9a9ab23f485f0491dc20f8d52fe0386628cb64f4b"
+    }
+  },
+  {
+    "id": 106,
+    "title": "Additional Services You Can Benefit From",
+    "png": "catalog/output/batch-011/Additional-Services-You-Can-Benefit-From.png",
+    "svg": "catalog/output/batch-011/Additional-Services-You-Can-Benefit-From.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "9a8fd8aa4a16954eb65351db97afdf456bff6b790320452f39d6371cdc27eca7",
+      "svg": "a688d9712b4bdea6e69848898baee1a245222109f523e96e7ab0ac41cbe03040"
+    }
+  },
+  {
+    "id": 107,
+    "title": "adhere to the following steps -",
+    "png": "catalog/output/batch-011/adhere-to-the-following-steps.png",
+    "svg": "catalog/output/batch-011/adhere-to-the-following-steps.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "806ac8b5afdf20c7a801198cbb5da58e2c0aaaadd0c2c8fc007442e9ebdc4033",
+      "svg": "8400985e8942ca28e74d0b97e0f4ed6c8778ffa38e661192e83e7f1e436c3835"
+    }
+  },
+  {
+    "id": 108,
+    "title": "Adjust CAD Models",
+    "png": "catalog/output/batch-011/Adjust-CAD-Models.png",
+    "svg": "catalog/output/batch-011/Adjust-CAD-Models.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "0636768261f3dcf6250c7957cbe2fd27febcdaef2422b605561f40a6fda234d2",
+      "svg": "891609e28b2986f8465b3ebf21c1df509670dbdb32fb35178a3b6d6ee7a7f56d"
+    }
+  },
+  {
+    "id": 109,
+    "title": "Administration Services",
+    "png": "catalog/output/batch-011/Administration-Services.png",
+    "svg": "catalog/output/batch-011/Administration-Services.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "ed06b0eefbda144be972d0277dd5e252323eb4c2fc46629815d64919cff8b342",
+      "svg": "482e4d602eab54ece3adf94b3cfcc6181c0b9ec8d6ba34129fe9abf61270475a"
+    }
+  },
+  {
+    "id": 110,
+    "title": "Administration Support for The Accounting And Insurance Sector",
+    "png": "catalog/output/batch-011/Administration-Support-for-The-Accounting-And-Insurance-Sector.png",
+    "svg": "catalog/output/batch-011/Administration-Support-for-The-Accounting-And-Insurance-Sector.svg",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": {
+      "png": "2b83eb003360c2ec21249a2f60a8371b867271bdafbb23627c41227efef22f16",
+      "svg": "22ad25eb8fe99d99194f6bcbb10b77117f871a203f5c646b42cf6302aced2427"
+    }
+  }
+]

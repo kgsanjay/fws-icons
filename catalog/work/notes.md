@@ -20,3 +20,11 @@ Batch 5 concepts and rejected ID 44 raster are recorded in generated-ID.json. ID
 Batch 6 concepts are recorded in generated-ID.json. ID 59 original raster was visually rejected for stray gray artifacts; its retry uses one compact monitor with a clean image-recognition network. No raster artwork was retouched beyond the established alpha=1 cleanup.
 
 Batch 7 concepts are in generated-ID.json; ID 66 retry removes stray marks and uses an analytics window with a shield inspected by a magnifier. HL7 transcription is represented by a clinical record, structured data and microphone, with no acronym lettering.
+
+Batch 8 uses custom unbranded CMS artwork for Drupal, not an external logo. IDs 75–76 were rendered before a user steering message; their saved PNGs were inspected and accepted without another generation attempt. Concepts and provenance are recorded in generated-ID.json.
+
+Batch 9 finance subjects keep separate compositions for incoming receivables, outgoing payables, aging reports, accounting software and bookkeeping partnership. Exact concepts and source paths are in generated-ID.json. No software logos, currency lettering or numbers were rendered.
+
+Batch 10 includes two visually rejected rasters: ID 92 uneven coin marks and ID 95 crowded NLP detail/stray marks. Their clean replacement PNGs were accepted without manual artwork edits; both attempts remain recorded. Generic additional-resource headings are represented by resource folders, books and browser controls. Exact concepts are in generated-ID.json.
+
+Batch 11 completes the first requested 100 new PNG-first outline icons (IDs 11–110). Unusual headings retain source wording in metadata and use literal generic process/service illustrations. No filled variants were made. All rendered PNGs were visually reviewed; alpha=1 cleanup is the only raster cleanup.
