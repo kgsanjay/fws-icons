@@ -3,7 +3,9 @@
 window.FWSExport = {
   makeSvg(source, options) {
     const size=Number(options.size);
-    if(!Number.isInteger(size)||size<16||size>4096)throw Error('Enter a whole-number size between 16 and 4096 px.');
+    const height=options.height===undefined?size:Number(options.height),padding=options.padding===undefined?0:Number(options.padding);
+    if([size,height].some(n=>!Number.isInteger(n)||n<16||n>4096))throw Error('Enter whole-number dimensions between 16 and 4096 px.');
+    if(!Number.isFinite(padding)||padding<0||padding>24)throw Error('Padding must be between 0 and 24%.');
     for(const color of [options.primary,options.accent,...(options.background?[options.background]:[])]) {
       if(!/^#[0-9a-f]{6}$/i.test(color))throw Error('Choose a valid six-digit hex color.');
     }
@@ -26,25 +28,29 @@ window.FWSExport = {
     copySvg(parsed.documentElement,root);
     const box=(root.getAttribute('viewBox')||'').trim().split(/[\s,]+/).map(Number);
     if(box.length!==4||box.some(n=>!Number.isFinite(n))||box[2]<=0||box[3]<=0)throw Error('This SVG has no valid canvas.');
-    root.setAttribute('width',String(size));root.setAttribute('height',String(size));
+    if(padding){const x=box[2]*padding/100,y=box[3]*padding/100;box[0]-=x;box[1]-=y;box[2]+=2*x;box[3]+=2*y;root.setAttribute('viewBox',box.join(' '));}
+    root.setAttribute('width',String(size));root.setAttribute('height',String(height));
+    root.setAttribute('preserveAspectRatio','xMidYMid meet');
     for(const attribute of ['fill','stroke'])[root,...root.querySelectorAll('['+attribute+']')].forEach(element=>{
       if(!element.hasAttribute(attribute))return;
       const value=element.getAttribute(attribute).toLowerCase();
       if(value==='#202123')element.setAttribute(attribute,options.primary);
-      if(value==='#c31e25')element.setAttribute(attribute,options.accent);
+      if(value==='#c31e25')element.setAttribute(attribute,options.mono?options.primary:options.accent);
     });
     if(options.background){const rect=doc.createElementNS('http://www.w3.org/2000/svg','rect');
-      ['x','y','width','height'].forEach((key,i)=>rect.setAttribute(key,String(box[i])));
+      // Cover rectangular export letterboxing as well as the SVG viewBox.
+      const scale=Math.max(box[2]/size,box[3]/height),w=size*scale,h=height*scale;
+      [box[0]+(box[2]-w)/2,box[1]+(box[3]-h)/2,w,h].forEach((value,i)=>rect.setAttribute(['x','y','width','height'][i],String(value)));
       rect.setAttribute('fill',options.background);root.insertBefore(rect,root.firstChild);
     }
     return new XMLSerializer().serializeToString(root);
   },
-  pngBlob(source,size){
+  pngBlob(source,size,height=size){
     return new Promise((resolve,reject)=>{
       const url=URL.createObjectURL(new Blob([source],{type:'image/svg+xml'})),image=new Image();
-      image.onload=()=>{try{const canvas=document.createElement('canvas');canvas.width=size;canvas.height=size;
+      image.onload=()=>{try{const canvas=document.createElement('canvas');canvas.width=size;canvas.height=height;
         const context=canvas.getContext('2d');if(!context)throw Error('PNG export is unavailable in this browser.');
-        context.drawImage(image,0,0,size,size);
+        context.drawImage(image,0,0,size,height);
         canvas.toBlob(blob=>{URL.revokeObjectURL(url);blob?resolve(blob):reject(Error('PNG export failed.'));},'image/png');
       }catch(error){URL.revokeObjectURL(url);reject(error);}};
       image.onerror=()=>{URL.revokeObjectURL(url);reject(Error('The SVG could not be rendered.'));};image.src=url;

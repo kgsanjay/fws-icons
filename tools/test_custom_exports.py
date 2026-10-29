@@ -56,6 +56,36 @@ with tempfile.TemporaryDirectory() as folder, sync_playwright() as p:
  assert page.locator('#primary-color').input_value()=='#202123'
  assert page.locator('#export-background').input_value()=='transparent'
  assert page.locator('#download-png').get_attribute('aria-disabled')=='false'
+ # Rectangular exports keep the artwork's proportions and fill all background corners.
+ page.locator('#lock-ratio').uncheck()
+ page.locator('#export-size').fill('320');page.locator('#export-height').fill('180')
+ assert page.locator('#export-dimensions').inner_text()=='320 × 180 px'
+ page.locator('#artwork-style').select_option('mono')
+ assert page.locator('#accent-color').is_disabled()
+ page.locator('#export-padding').fill('12');assert page.locator('#padding-value').inner_text()=='12%'
+ page.locator('#export-background').select_option('solid')
+ page.locator('#background-color').evaluate('(e)=>{e.value="#fceedd";e.dispatchEvent(new Event("input",{bubbles:true}));}')
+ with page.expect_download() as download:page.locator('#download-svg').click()
+ download.value.save_as(svg);rectangular=ET.parse(svg).getroot()
+ assert (rectangular.get('width'),rectangular.get('height'))==('320','180')
+ assert rectangular.get('preserveAspectRatio')=='xMidYMid meet'
+ assert rectangular.get('viewBox')!=ET.fromstring(original_text).get('viewBox')
+ assert '#c31e25' not in svg.read_text().lower()
+ with page.expect_download() as download:page.locator('#download-png').click()
+ assert '320x180' in download.value.suggested_filename
+ download.value.save_as(png)
+ with Image.open(png) as im:
+  assert im.size==(320,180)
+  assert all(im.convert('RGBA').getpixel(point)==(252,238,221,255) for point in [(0,0),(319,0),(0,179),(319,179)])
+ for surface in ['dark','light','checker']:
+  page.locator('[data-surface="'+surface+'"]').click()
+  assert page.locator('#detail-preview').get_attribute('data-surface')==surface
+ assert page.locator('#export-background').input_value()=='solid'  # canvas choice is independent
+ page.locator('#export-height').fill('4097');assert page.locator('#export-error').is_visible()
+ page.locator('#reset-export').click()
+ assert page.locator('#lock-ratio').is_checked() and page.locator('#export-height').is_disabled()
+ assert page.locator('#artwork-style').input_value()=='original' and page.locator('#export-padding').input_value()=='0'
+ assert not page.locator('#source-disclosure').evaluate('(e)=>e.open')
  page.locator('[data-size="48"]').click();assert page.locator('#export-size').input_value()=='48'
  page.locator('[data-format="svg"]').click()
  page.screenshot(path='/workspace/fws-icons/work/gallery-customizer-desktop.png',full_page=False)
@@ -70,4 +100,4 @@ with tempfile.TemporaryDirectory() as folder, sync_playwright() as p:
  assert page.locator('#customize').is_hidden() and page.locator('#original-downloads').is_hidden()
  assert not errors,errors
  browser.close()
- print('PASS: real custom SVG/PNG downloads, dimensions, recoloring, background/alpha, copied SVG, input limits, reset, presets, icon switching, pending state, mobile fit; originals unchanged')
+ print('PASS: square/rectangular SVG/PNG downloads, proportional fit, padding, single color, solid corners/alpha, canvas surfaces, copied SVG, input limits, reset, presets, icon switching, pending state, mobile fit; originals unchanged')
