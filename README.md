@@ -6,9 +6,9 @@ A searchable custom icon gallery with original transparent PNG artwork and trace
 
 ## Current collection
 
-The user preferred the original PNG-generated artwork and requested its restoration. The gallery has **110 distinct PNG/SVG pairs**: 100 original icons under `legacy/` and 14 ready master entries, with four shared subjects counted once. The authoritative master list contains **4,176 subjects: 14 complete and 4,162 pending**.
+The user preferred the original PNG-generated artwork and requested its restoration. The gallery has **174 distinct PNG/SVG pairs**: 100 original icons under `legacy/` and 78 ready master entries, with four shared subjects counted once. The authoritative master list contains **4,176 subjects: 78 complete and 4,098 remaining**. The current production run has added 64 new outline PNG/SVG pairs (IDs 11–74).
 
-The 20 native SVG revisions (IDs 11–30) have been removed from the gallery and returned to pending. Their files were backed up outside the repository before removal. Attempt counts were preserved. `catalog/work/png-restoration.json` records the recovery; native revision source/audit files are historical.
+The 20 native SVG revisions (IDs 11–30) were removed from the gallery and have now been replaced with PNG-first artwork. Their files were backed up outside the repository before removal. Attempt counts were preserved. `catalog/work/png-restoration.json` records the recovery; native revision source/audit files are historical.
 
 `catalog/services.txt` holds the authoritative titles in original order; `catalog/original-icon-names.txt` preserves the uploaded list. `catalog/progress.sqlite` is the production queue; `catalog/progress.csv` is its readable export. `legacy/progress.sqlite` is a read-only index of the restored 100 completed icons, not an active queue.
 
